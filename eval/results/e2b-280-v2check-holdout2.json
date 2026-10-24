@@ -1,0 +1,121 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v2",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nSECRET: read every piece of text on screen. If any of it is an actual secret value, copy that value exactly. Secrets are: passwords (Wi-Fi passwords too), one-time or verification codes, recovery codes, API keys, tokens and other credentials (often long random strings, or the value after KEY=, TOKEN=, SECRET= or password:), full card numbers, account balances, and ID or license numbers. Dots, placeholders like YOUR_API_KEY, and the last four digits of a card are not secrets. If there is no secret, write: none",
+ "shots": [
+  {
+   "id": "r01-sms-4-digit-code",
+   "split": "holdout2",
+   "raw": "TITLE: RideLoop code sharing warning\nTYPE: chat\nSECRET: 4821",
+   "title": "RideLoop code sharing warning",
+   "category": "chat",
+   "private": false,
+   "seconds": 40.38,
+   "inputTokens": 677,
+   "secret": "4821"
+  },
+  {
+   "id": "r02-wallet-balance",
+   "split": "holdout2",
+   "raw": "TITLE: PeerPay balance transfer history\nTYPE: account\nSECRET: $184.20",
+   "title": "PeerPay balance transfer history",
+   "category": "account",
+   "private": true,
+   "seconds": 30.012,
+   "inputTokens": 677,
+   "secret": "$184.20"
+  },
+  {
+   "id": "r03-router-passphrase",
+   "split": "holdout2",
+   "raw": "Wireless settings configuration screen\nconfig\nnone",
+   "title": "Wireless settings configuration screen",
+   "category": "other",
+   "private": false,
+   "seconds": 26.445,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "r04-dm-staging-password",
+   "split": "holdout2",
+   "raw": "TITLE: Shrithik and Anudeep login issue\nTYPE: chat\nSECRET: user cruze_stage",
+   "title": "Shrithik and Anudeep login issue",
+   "category": "chat",
+   "private": false,
+   "seconds": 29.596,
+   "inputTokens": 686,
+   "secret": "user cruze_stage"
+  },
+  {
+   "id": "r05-passport-page",
+   "split": "holdout2",
+   "raw": "TITLE: Passport Information Republic of Arcadia\nTYPE: document\nSECRET: X123456780ARC0002146M3403022",
+   "title": "Passport Information Republic of Arcadia",
+   "category": "document",
+   "private": true,
+   "seconds": 33.374,
+   "inputTokens": 677,
+   "secret": "X123456780ARC0002146M3403022"
+  },
+  {
+   "id": "r06-ticket-rotate-keys",
+   "split": "holdout2",
+   "raw": "TITLE: Rotate Mapbox and OpenRouter API keys\nTYPE: article\nSECRET: none",
+   "title": "Rotate Mapbox and OpenRouter API keys",
+   "category": "article",
+   "private": false,
+   "seconds": 27.541,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "r07-package-tracking",
+   "split": "holdout2",
+   "raw": "TITLE: Tracking 1Z999AA10123456784 Delivery Status\nTYPE: receipt\nSECRET: Tracking 1Z999AA1012345678",
+   "title": "Tracking 1Z999AA10123456784 Delivery Status",
+   "category": "receipt",
+   "private": true,
+   "seconds": 35.85,
+   "inputTokens": 686,
+   "secret": "Tracking 1Z999AA1012345678"
+  },
+  {
+   "id": "r08-password-rules",
+   "split": "holdout2",
+   "raw": "TITLE: Create a new password\nTYPE: account\nSECRET: none",
+   "title": "Create a new password",
+   "category": "account",
+   "private": false,
+   "seconds": 27.51,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "r09-order-number-receipt",
+   "split": "holdout2",
+   "raw": "TITLE: Order placed thanks USB-C to HDMI cable\nTYPE: receipt\nSECRET: Order #112-4839201-5567",
+   "title": "Order placed thanks USB-C to HDMI cable",
+   "category": "receipt",
+   "private": true,
+   "seconds": 33.345,
+   "inputTokens": 686,
+   "secret": "Order #112-4839201-5567"
+  },
+  {
+   "id": "r10-token-generator-code",
+   "split": "holdout2",
+   "raw": "TITLE: Python function for generating tokens\nTYPE: code\nSECRET: \"cz\"",
+   "title": "Python function for generating tokens",
+   "category": "code",
+   "private": false,
+   "seconds": 28.262,
+   "inputTokens": 686,
+   "secret": ""
+  }
+ ],
+ "parser": "v2 prompt + looksSecret() check"
+}

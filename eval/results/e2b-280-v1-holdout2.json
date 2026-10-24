@@ -1,0 +1,120 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v1",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nPRIVATE: yes or no. Say yes only if the image itself shows a secret or an identity document: a password, a one-time or verification code, recovery codes, an API key or token, a full card number with expiry, an account balance, or a driver license or ID. A page that only talks about passwords, or a list of Wi-Fi network names, is no.",
+ "shots": [
+  {
+   "id": "r01-sms-4-digit-code",
+   "split": "holdout2",
+   "raw": "TITLE: RideLoop code message\nTYPE: chat\nPRIVATE: no",
+   "title": "RideLoop code message",
+   "category": "chat",
+   "private": false,
+   "seconds": 26.522,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "r02-wallet-balance",
+   "split": "holdout2",
+   "raw": "TITLE: PeerPay balance transactions\nTYPE: account\nPRIVATE: yes",
+   "title": "PeerPay balance transactions",
+   "category": "account",
+   "private": true,
+   "seconds": 26.744,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "r03-router-passphrase",
+   "split": "holdout2",
+   "raw": "Wireless settings configuration for a router\naccount\nno",
+   "title": "Wireless settings configuration for a router",
+   "category": "other",
+   "private": false,
+   "seconds": 24.946,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r04-dm-staging-password",
+   "split": "holdout2",
+   "raw": "TITLE: Shrithik and Anudeep login issue\nTYPE: chat\nPRIVATE: no",
+   "title": "Shrithik and Anudeep login issue",
+   "category": "chat",
+   "private": false,
+   "seconds": 26.063,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r05-passport-page",
+   "split": "holdout2",
+   "raw": "TITLE: Passport Information Republic of Arcadia\nTYPE: document\nPRIVATE: yes",
+   "title": "Passport Information Republic of Arcadia",
+   "category": "document",
+   "private": true,
+   "seconds": 24.764,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "r06-ticket-rotate-keys",
+   "split": "holdout2",
+   "raw": "TITLE: Rotate Mapbox and OpenRouter API keys\nTYPE: article\nPRIVATE: no",
+   "title": "Rotate Mapbox and OpenRouter API keys",
+   "category": "article",
+   "private": false,
+   "seconds": 26.478,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r07-package-tracking",
+   "split": "holdout2",
+   "raw": "TITLE: Tracking 1Z999AA10123456784 Delivery Status\nTYPE: receipt\nPRIVATE: no",
+   "title": "Tracking 1Z999AA10123456784 Delivery Status",
+   "category": "receipt",
+   "private": false,
+   "seconds": 30.222,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r08-password-rules",
+   "split": "holdout2",
+   "raw": "TITLE: Create a new password\nTYPE: account\nPRIVATE: no",
+   "title": "Create a new password",
+   "category": "account",
+   "private": false,
+   "seconds": 26.216,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r09-order-number-receipt",
+   "split": "holdout2",
+   "raw": "TITLE: Order placed thanks USB to HDMI cable\nTYPE: receipt\nPRIVATE: no",
+   "title": "Order placed thanks USB to HDMI cable",
+   "category": "receipt",
+   "private": false,
+   "seconds": 26.54,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "r10-token-generator-code",
+   "split": "holdout2",
+   "raw": "TITLE: Python function for generating tokens\nTYPE: code\nPRIVATE: no",
+   "title": "Python function for generating tokens",
+   "category": "code",
+   "private": false,
+   "seconds": 25.955,
+   "inputTokens": 647,
+   "secret": ""
+  }
+ ]
+}

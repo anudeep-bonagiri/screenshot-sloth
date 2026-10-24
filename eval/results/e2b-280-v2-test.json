@@ -1,0 +1,252 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v2",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nSECRET: read every piece of text on screen. If any of it is an actual secret value, copy that value exactly. Secrets are: passwords (Wi-Fi passwords too), one-time or verification codes, recovery codes, API keys, tokens and other credentials (often long random strings, or the value after KEY=, TOKEN=, SECRET= or password:), full card numbers, account balances, and ID or license numbers. Dots, placeholders like YOUR_API_KEY, and the last four digits of a card are not secrets. If there is no secret, write: none",
+ "shots": [
+  {
+   "id": "t01-python-keyerror",
+   "split": "test",
+   "raw": "TITLE: KeyError in Python traceback\nTYPE: error\nSECRET: None",
+   "title": "KeyError in Python traceback",
+   "category": "error",
+   "private": false,
+   "seconds": 27.351,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t02-disk-not-ejected",
+   "split": "test",
+   "raw": "TITLE: Disk Not Ejected Properly Error Message\nTYPE: error\nSECRET: Eject \"SANDISK 64GB\" before disconnecting or turning it off.",
+   "title": "Disk Not Ejected Properly Error Message",
+   "category": "error",
+   "private": true,
+   "seconds": 31.109,
+   "inputTokens": 686,
+   "secret": "Eject \"SANDISK 64GB\" before disconnecting or turning it off."
+  },
+  {
+   "id": "t03-env-api-key",
+   "split": "test",
+   "raw": "TITLE:.env Properties Configuration File\nTYPE: code\nSECRET: DATABASE_URL=postgres://cruze:Tr4ffic!2026@localhost:5432/cruise_dev, MAPBOX_",
+   "title": ".env Properties Configuration File",
+   "category": "code",
+   "private": true,
+   "seconds": 34.12,
+   "inputTokens": 686,
+   "secret": "DATABASE_URL=postgres://cruze:Tr4ffic!2026@localhost:5432/cruise_dev, MAPBOX_"
+  },
+  {
+   "id": "t04-sql-query",
+   "split": "test",
+   "raw": "TITLE: SQL query for student course enrollment\nTYPE: code\nSECRET: SELECT s.student_id, s.last_name, COUNT(e.course_id) AS courses FROM students s LEFT JOIN enrollments e ON e",
+   "title": "SQL query for student course enrollment",
+   "category": "code",
+   "private": true,
+   "seconds": 34.935,
+   "inputTokens": 686,
+   "secret": "SELECT s.student_id, s.last_name, COUNT(e.course_id) AS courses FROM students s LEFT JOIN enrollments e ON e"
+  },
+  {
+   "id": "t05-chat-dinner-plans",
+   "split": "test",
+   "raw": "TITLE: Shrithik's plans for dinner and parking\nTYPE: chat\nSECRET: none",
+   "title": "Shrithik's plans for dinner and parking",
+   "category": "chat",
+   "private": false,
+   "seconds": 26.959,
+   "inputTokens": 677,
+   "secret": ""
+  },
+  {
+   "id": "t06-chat-wifi-password",
+   "split": "test",
+   "raw": "TITLE: Apartment Wi-Fi setup information\nTYPE: chat\nSECRET: Jordan network: Casa3B_5G password: tortilla-Moon-8841",
+   "title": "Apartment Wi-Fi setup information",
+   "category": "chat",
+   "private": true,
+   "seconds": 31.468,
+   "inputTokens": 677,
+   "secret": "Jordan network: Casa3B_5G password: tortilla-Moon-8841"
+  },
+  {
+   "id": "t07-grocery-receipt",
+   "split": "test",
+   "raw": "TITLE: Hill Country Market Purchase Receipt\nTYPE: receipt\nSECRET: 33.22",
+   "title": "Hill Country Market Purchase Receipt",
+   "category": "receipt",
+   "private": true,
+   "seconds": 28.266,
+   "inputTokens": 677,
+   "secret": "33.22"
+  },
+  {
+   "id": "t08-invoice-website",
+   "split": "test",
+   "raw": "TITLE: Invoice for Website Redesign and Chatbot Setup\nTYPE: receipt\nSECRET: $900.00, $300.00, $1,200.00",
+   "title": "Invoice for Website Redesign and Chatbot Setup",
+   "category": "receipt",
+   "private": true,
+   "seconds": 32.822,
+   "inputTokens": 686,
+   "secret": "$900.00, $300.00, $1,200.00"
+  },
+  {
+   "id": "t09-map-directions",
+   "split": "test",
+   "raw": "TITLE: Map directions from Boerne to Garner State Park\nTYPE: travel\nSECRET: none",
+   "title": "Map directions from Boerne to Garner State Park",
+   "category": "travel",
+   "private": false,
+   "seconds": 29.192,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t10-hotel-booking",
+   "split": "test",
+   "raw": "TITLE: Harborlight Inn Mission District Booking Confirmation\nTYPE: receipt\nSECRET: Booking confirmed",
+   "title": "Harborlight Inn Mission District Booking Confirmation",
+   "category": "receipt",
+   "private": true,
+   "seconds": 27.222,
+   "inputTokens": 686,
+   "secret": "Booking confirmed"
+  },
+  {
+   "id": "t11-hack-day-event",
+   "split": "test",
+   "raw": "TITLE: Hacktoberfest Hack Day event details\nTYPE: schedule\nSECRET: none",
+   "title": "Hacktoberfest Hack Day event details",
+   "category": "schedule",
+   "private": false,
+   "seconds": 27.605,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t12-syllabus-grading",
+   "split": "test",
+   "raw": "Activities and Grading breakdown\ndocument\nnone",
+   "title": "Activities and Grading breakdown",
+   "category": "other",
+   "private": false,
+   "seconds": 24.606,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t13-docs-reset-password",
+   "split": "test",
+   "raw": "TITLE: Reset your password instructions\nTYPE: article\nSECRET: none",
+   "title": "Reset your password instructions",
+   "category": "article",
+   "private": false,
+   "seconds": 26.724,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t14-recovery-codes",
+   "split": "test",
+   "raw": "TITLE: Save your recovery codes\nTYPE: account\nSECRET: a7f3c-91d2e, 4be0d-c33a8, 8d5e1-a4f9",
+   "title": "Save your recovery codes",
+   "category": "account",
+   "private": true,
+   "seconds": 37.39,
+   "inputTokens": 686,
+   "secret": "a7f3c-91d2e, 4be0d-c33a8, 8d5e1-a4f9"
+  },
+  {
+   "id": "t15-id-card",
+   "split": "test",
+   "raw": "TITLE: State of North Plains Driver License Information\nTYPE: document\nSECRET: DL NP 40917725 EXP 08/14/2031 SAMPLE ALEX J DOB 03/0",
+   "title": "State of North Plains Driver License Information",
+   "category": "document",
+   "private": true,
+   "seconds": 37.141,
+   "inputTokens": 677,
+   "secret": "DL NP 40917725 EXP 08/14/2031 SAMPLE ALEX J DOB 03/0"
+  },
+  {
+   "id": "t16-dashboard-users",
+   "split": "test",
+   "raw": "TITLE: Weekly active users and new signups chart\nTYPE: chart\nSECRET: none",
+   "title": "Weekly active users and new signups chart",
+   "category": "chart",
+   "private": false,
+   "seconds": 26.98,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t17-budget-sheet",
+   "split": "test",
+   "raw": "TITLE: Day budget for food and supplies\nTYPE: receipt\nSECRET: none",
+   "title": "Day budget for food and supplies",
+   "category": "receipt",
+   "private": false,
+   "seconds": 26.617,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t18-linkedin-internship",
+   "split": "test",
+   "raw": "TITLE: Daniel Okafor Software Engineering Intern at Kestrel Logistics\nTYPE: social\nSECRET: none",
+   "title": "Daniel Okafor Software Engineering Intern at Kestrel Logistics",
+   "category": "social",
+   "private": false,
+   "seconds": 28.842,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t19-meme-my-machine",
+   "split": "test",
+   "raw": "TITLE: It Works On My Machine Shipping Your Machine\nTYPE: other\nSECRET: none",
+   "title": "It Works On My Machine Shipping Your Machine",
+   "category": "other",
+   "private": false,
+   "seconds": 27.822,
+   "inputTokens": 677,
+   "secret": ""
+  },
+  {
+   "id": "t20-wifi-settings",
+   "split": "test",
+   "raw": "TITLE: Wi-Fi Connected Networks List\nTYPE: article\nSECRET: utsa-secure",
+   "title": "Wi-Fi Connected Networks List",
+   "category": "article",
+   "private": true,
+   "seconds": 27.199,
+   "inputTokens": 686,
+   "secret": "utsa-secure"
+  },
+  {
+   "id": "t21-pull-request",
+   "split": "test",
+   "raw": "TITLE: Fix pre-filter: let four-word sentences through #7\nTYPE: code\nSECRET: none",
+   "title": "Fix pre-filter: let four-word sentences through #7",
+   "category": "code",
+   "private": false,
+   "seconds": 29.367,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "t22-card-details",
+   "split": "test",
+   "raw": "TITLE: Card details for Pinewood CU Debit\nTYPE: account\nSECRET: 4417 1234 5678 9113",
+   "title": "Card details for Pinewood CU Debit",
+   "category": "account",
+   "private": true,
+   "seconds": 32.703,
+   "inputTokens": 677,
+   "secret": "4417 1234 5678 9113"
+  }
+ ]
+}

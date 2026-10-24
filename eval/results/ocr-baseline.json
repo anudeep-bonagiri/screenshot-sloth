@@ -1,0 +1,474 @@
+{
+ "model": "Tesseract 5 OCR + keyword rules (no model)",
+ "softTokens": null,
+ "shots": [
+  {
+   "id": "d01-npm-build-error",
+   "split": "dev",
+   "title": "anudeep@mbp ratecon-radar % npm run build",
+   "category": "code",
+   "private": false,
+   "seconds": 0.6986615657806396,
+   "ocr": "anudeep@mbp ratecon-radar % npm run build\n\n> ratecon-radar@0.1.0 build\n> vite build\n\nvite v5.4.2 building for production...\n\nvy 41 modules transformed.\n\nTypeError: Cannot read properties of undefined (reading 'map')\nat parseFacts (src/core.js:212:31)\nat analyze (src/worker.js:77:20)\n\nnpm ERR! code ELIFECYCLE\n\nnpm ERR! errno 1\n\nnpm ERR! ratecon-radar@0.1.0 build: \u2018vite build~\n\nnpm ERR! Exit status 1\n"
+  },
+  {
+   "id": "d02-group-chat-pizza",
+   "split": "dev",
+   "title": "Rowdy Launch officers",
+   "category": "chat",
+   "private": false,
+   "seconds": 0.47734928131103516,
+   "ocr": "9:41 Wieo\n\nRowdy Launch officers\n\n5 people\nMaya\nhow many pizzas for friday hack\nnight?\nChris\n\nlast time 12 wasn't enough lol\n\nlet's do 16, 4 cheese 4 pepperoni\n\n8 whatever is on special\n\nMaya\ni'll order from the place on 1604,\npickup 6:15\n\nChris\nsomeone grab plates + napkins\n"
+  },
+  {
+   "id": "d03-order-headphones",
+   "split": "dev",
+   "title": "shop.fieldsparrow.com/orders/FS-209331",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.4974677562713623,
+   "ocr": "shop.fieldsparrow.com/orders/FS-209331\n\nThanks, your order is confirmed\nOrder FS-209331 - placed October 5, 2026\nFieldsparrow Arc wireless headphones, charcoal\n\nQty 1\n$79.99\n\nSubtotal\nShipping\nTax\nTotal\n\nArrives Thu, Oct 9. We'll email you when it ships.\n\n$79.99\nFree\n$6.60\n$86.59\n"
+  },
+  {
+   "id": "d04-sms-verification-code",
+   "split": "dev",
+   "title": "Text Message - Today 7:12 AM",
+   "category": "account",
+   "private": true,
+   "seconds": 0.4781458377838135,
+   "ocr": "7:12 | |\n\n72975\nText Message - Today 7:12 AM\n\nPinewood Credit Union: Your\nverification code is 482913. It\nexpires in 10 minutes. Never share\nthis code. We will never call to ask\nfor it.\n\nPinewood Credit Union: Sign-in\nattempt from a new device\n(Chrome on Mac). If this wasn't\nyou, reply STOP.\n"
+  },
+  {
+   "id": "d05-week-calendar",
+   "split": "dev",
+   "title": "October 2026 Week of Oct 5",
+   "category": "schedule",
+   "private": false,
+   "seconds": 0.40172433853149414,
+   "ocr": "October 2026 Week of Oct 5\nMon 5\n9 AM\n0 AM { Operating Systems (online)\n\n1AM\n\n2PM\n\nPM\n\n2PM\n\n3PM { Computer Architecture - SP1230\n\n4PM\n\nTue 6\n\n{swec\n\nWed 7\n\n{ Operating Systems (online)\n\n{ Computer Architecture - SP1 230\n\nThu 8\n\n{swec\n\nFri 9\n\n{ startup Garage\n"
+  },
+  {
+   "id": "d06-article-sloth",
+   "split": "dev",
+   "title": "@ \u00a9 @ \u2014 enwikipedia.org/wiki/Three-toed_sloth",
+   "category": "article",
+   "private": false,
+   "seconds": 0.6028468608856201,
+   "ocr": "@ \u00a9 @ \u2014 enwikipedia.org/wiki/Three-toed_sloth\n\nThree-toed sloth\n\nThe three-toed sloths are arboreal neotropical mammals. They are the only members of the genus Bradypus and the family\nBradypodidae. The four living species are the brown-throated sloth, the maned sloth, the pale-throated sloth, and the pygmy three-toed\nsloth.\n\nSloths move slowly to conserve energy. Their diet of leaves provides little energy, and digestion can take weeks. They come down from\n\nthe trees about once a week to defecate.\n\nDescription\n\nThree-toed sloths are about the size of a small dog, with a head and body length of around 45 cm and a weight of 3.5 to 4.5 kg.\n"
+  },
+  {
+   "id": "d07-boarding-pass",
+   "split": "dev",
+   "title": "MERIDIAN AIR - Boarding pass",
+   "category": "travel",
+   "private": false,
+   "seconds": 0.3949751853942871,
+   "ocr": "5:48 iico\n\nMERIDIAN AIR - Boarding pass\n\nSAT SFO\n\nSan Antonio + San Francisco\n\nFlight Boards\nMA 1186 6:25 AM\n\nGroup\n4\n\nPassenger\nBONAGIRI/ANUDEEP\n\n"
+  },
+  {
+   "id": "d08-editor-haversine",
+   "split": "dev",
+   "title": "EXPLORER src/geo.py \u2014 Python",
+   "category": "code",
+   "private": false,
+   "seconds": 0.8449084758758545,
+   "ocr": "EXPLORER src/geo.py \u2014 Python\n\nsrc a\nimport math\n\ntests\n\nREADME.md ; ;\n\npackage son def haversine miles(latl, lonl, lat2, lon2):\n\nAa \"\"\"Great-circle distance between two points, in miles.\"\"\"\n.gitignore\n\npl, p2 = math.radians(latl), math. radians(lat2)\n\ndp = math.radians(lat2 - lat1)\n\ndl = math.radians(lon2 - lon1)\n\na = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2\n10 return 2 * r * math.asin(math.sqrt(a) )\n\n1\n2\n3\n4\n5 r = 3958.8\n6\n7\n8\n9\n\n12 def route _length(points):\n13 return sum(haversine miles(*a, *b) for a, b in zip(points, points[1:]))\n"
+  },
+  {
+   "id": "d09-bank-balance",
+   "split": "dev",
+   "title": "Pinewood Credit Union",
+   "category": "account",
+   "private": true,
+   "seconds": 0.43216753005981445,
+   "ocr": "12:03 iico\n\nGood afternoon\nPinewood Credit Union\n\nEveryday Checking \u00b0\u00b0\u00b0*7731\n\n$2,341.18\n\nAvailable balance\n\nSavings \u00b0\u00b0**0458\n\n$5,120.00\nH-E-B #612 -$48.21\nPayroll SWBC +$812.40\n\nShell 1604 -$31.07\n"
+  },
+  {
+   "id": "d10-social-hacktoberfest",
+   "split": "dev",
+   "title": "Week 2 of Hacktoberfest done @ This year",
+   "category": "social",
+   "private": false,
+   "seconds": 0.5161902904510498,
+   "ocr": "Priya Raman\n@priyabuilds - 2h\n\nWeek 2 of Hacktoberfest done @ This year it's not about PR\ncounts, you build something new with open-source Al. Mine runs\na 2B model entirely in the browser. Writeup on DEV tonight.\n\n@4 31 212\n"
+  },
+  {
+   "id": "t01-python-keyerror",
+   "split": "test",
+   "title": "In [14]: df.groupby(\"pickup_zone\")[\"fare_amt\"].mean()",
+   "category": "error",
+   "private": false,
+   "seconds": 0.746488094329834,
+   "ocr": "In [14]: df.groupby(\"pickup_zone\")[\"fare_amt\"].mean()\n\nKeyError Traceback (most recent call last)\n\nFile ~/miniconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py:3805, in Index.get_loc(self, key)\n3804 try:\n\n-> 3805 return self. engine.get_loc(casted_key)\n3806 except KeyError as err:\n\nKeyError: \u2018fare _amt'\nThe above exception was the direct cause of the following exception:\nKeyError Traceback (most recent call last)\n\nCell In[14], line 1\n----> 1 df.groupby(\"pickup zone\") [\"fare_amt\"].mean()\n"
+  },
+  {
+   "id": "t02-disk-not-ejected",
+   "split": "test",
+   "title": "Disk Not Ejected Properly",
+   "category": "error",
+   "private": false,
+   "seconds": 0.45705676078796387,
+   "ocr": "Disk Not Ejected Properly\n\nEject \"SANDISK 64GB\" before disconnecting or\nturning it off.\n\n"
+  },
+  {
+   "id": "t03-env-api-key",
+   "split": "test",
+   "title": "# local dev only, do not commit",
+   "category": "code",
+   "private": true,
+   "seconds": 0.9070894718170166,
+   "ocr": "EXPLORER\nsrc\ntests\nREADME.md\npackage.json\nenv\n\n.gitignore\n\n-env \u2014 Properties\n\n1\n2\n3\n4\n5\n6\n\n# local dev only, do not commit\n\nDATABASE _URL=postgres://cruze:Tr4ffic!2026@localhost :5432/cruze_ dev\nMAPBOX_TOKEN=pk.eyJ11Ijo0iY3J lemUtZGV2TiwiYSI6ImNseDkOInO.k3IJd9Qp\nOPENROUTER API _KEY=sk-or-v1-8c41f0e2d9b7a6c5e4f3a2b1cOd9e8F7ab6b5c4d3\n\nSENTRY _DSN=https://3f2a1b@044821.ingest.sentry.i0/66190\nNODE_ENV=development\n"
+  },
+  {
+   "id": "t04-sql-query",
+   "split": "test",
+   "title": "EXPLORER lab6.sql \u2014 SQL",
+   "category": "document",
+   "private": false,
+   "seconds": 0.7620127201080322,
+   "ocr": "EXPLORER lab6.sql \u2014 SQL\n\nsre SELECT s.student_id, s.last_ name, COUNT(e.course id) AS courses\n\nFROM students s\n\nLEFT JOIN enrollments e ON e.student_id = s.student_id\nAND e.term = 'FA26'\n\nGROUP BY s.student_id, s.last_name\n\nHAVING COUNT(e.course id) >= 5\n\nORDER BY courses DESC;\n\ntests\nREADME.md\npackage.json\nenv\n\n.gitignore\n\nNOU BPWNPH\n"
+  },
+  {
+   "id": "t05-chat-dinner-plans",
+   "split": "test",
+   "title": "dinner tonight? i'm done at 6",
+   "category": "chat",
+   "private": false,
+   "seconds": 0.3442871570587158,
+   "ocr": "5:31 iico\nShrithik\n\ndinner tonight? i'm done at 6\n\nyes. pearl? that taco place by the\nbrewery\n\n7:00 works, i'll put our name down\n\nbet. parking there is awful so i'll\ntake the bus\n"
+  },
+  {
+   "id": "t06-chat-wifi-password",
+   "split": "test",
+   "title": "what's the new wifi after the router",
+   "category": "travel",
+   "private": true,
+   "seconds": 0.3627164363861084,
+   "ocr": "10:02 Wieo\n\nApartment 3B\n3 people\n\nwhat's the new wifi after the router\n\nreset?\n\nJordan\nnetwork: Casa3B_5G\n\nJordan\npassword: tortilla-Moon-8841\n\nSam\nlife saver\n"
+  },
+  {
+   "id": "t07-grocery-receipt",
+   "split": "test",
+   "title": "HILL COUNTRY MARKET #14",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.5106816291809082,
+   "ocr": "6:44 Wisc\n\nHILL COUNTRY MARKET #14\n1100 MAIN ST, BOERNE TX\n10/16/26 6:41 PM\n\nBANANAS 2.3 LB 1.36\nEGGS LG 18CT 4.12\nWHOLE MILK GAL 3.48\nBASMATI RICE 10LB 14.99\nONIONS YELLOW 3LB 2.98\nGREEK YOGURT D2) 0)\nCILANTRO 0.79\nTOTAL 33.22\n\nDEBIT ****2291 APPROVED\n\nTHANK YOU FOR SHOPPING\n"
+  },
+  {
+   "id": "t08-invoice-website",
+   "split": "test",
+   "title": "| NVO | CE Boerne, TX",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.4568443298339844,
+   "ocr": "Anudeep Bonagiri\n| NVO | CE Boerne, TX\n#2026-014\n\nBill to: Riverbend Home Care Services\n\nIssued Oct 2, 2026 - Due Oct 16, 2026\n\nDescription Amount\nWebsite redesign, 6 pages $900.00\nFAQ chatbot setup $300.00\n\nTotal due $1,200.00\n"
+  },
+  {
+   "id": "t09-map-directions",
+   "split": "test",
+   "title": "Garner State Park, Concan, TX",
+   "category": "travel",
+   "private": false,
+   "seconds": 0.4595348834991455,
+   "ocr": "Boerne, TX\n\nGarner State Park, Concan, TX\n\nThr 52 min (104 mi)\n\nvia TX-46 W and US-83 N\nFastest route, the usual traffic\n\n2 hr 5 min (108 mi) Garner State Park\nvia RR 337\n\nBandera\n\nBoerne\n"
+  },
+  {
+   "id": "t10-hotel-booking",
+   "split": "test",
+   "title": "@ \u00a9 @ \u00a9 stays.harborlight.com/trips/HL-77193",
+   "category": "travel",
+   "private": false,
+   "seconds": 0.48911595344543457,
+   "ocr": "@ \u00a9 @ \u00a9 stays.harborlight.com/trips/HL-77193\n\nv Booking confirmed\n\nHarborlight Inn, Mission District, San Francisco\n\nConfirmation HL-77193\n\nCheck-in Check-out Guests Room\nFri, Oct 23 Sun, Oct 25 2 adults 2 queen beds\nafter 3 PM before 11 AM\n\nTotal for 2 nights: $412.60 (paid)\n\nFree cancellation until Oct 21.\n"
+  },
+  {
+   "id": "t11-hack-day-event",
+   "split": "test",
+   "title": "ROWDY LAUNCH PRESENTS",
+   "category": "schedule",
+   "private": false,
+   "seconds": 0.45001673698425293,
+   "ocr": "ROWDY LAUNCH PRESENTS\n\nHacktoberfest Hack Day\n\nSaturday, October 31-10 AM to 5 PM\nUTSA Business Building, 3rd floor\n\n[ Build with open-source Al [ Food all day [ Prizes at 4:30\n\nRSVP on RowdyLink\n"
+  },
+  {
+   "id": "t12-syllabus-grading",
+   "split": "test",
+   "title": "@ \u00a9 @ _utsa.simplesyllabus.com/en-US/doc/7jz/Fall-2026-CS-3733",
+   "category": "document",
+   "private": false,
+   "seconds": 0.4924194812774658,
+   "ocr": "@ \u00a9 @ _utsa.simplesyllabus.com/en-US/doc/7jz/Fall-2026-CS-3733\n\nActivities and Grading\n\nCS 3733 Operating Systems - Fall 2026\n\nActivity Quantity Percentage\nProjects 3 30\nHomework Assignments 5 40\nMid-Term Exam 1 15\n\nFinal Exam 1 15\n\nTotal 100%\n\nLate Submission Policy\n\nLate projects/assignments will suffer a 10 percentage point penalty for every 24 hour period. Projects/Assignments\nturned in 5 or more days after the due date will receive a grade of 0.\n"
+  },
+  {
+   "id": "t13-docs-reset-password",
+   "split": "test",
+   "title": "eee docs.tallyboard.dev/account/reset-password",
+   "category": "account",
+   "private": true,
+   "seconds": 0.7508983612060547,
+   "ocr": "eee docs.tallyboard.dev/account/reset-password\n\nGetting started\n\nWorkspaces Reset your password\nAccount\nProfile If you forgot your password, you can reset it from the sign-in page.\nReset your password 1. Go to the sign-in page and click Forgot password?\nTwo-step verification 2. Enter the email address for your account.\nBilling 3. Open the email from Tallyboard and click the reset link. The link expires after 30\n\nminutes.\n\n4. Choose a new password with at least 12 characters.\n\nTallyboard support will never ask you for your password.\n"
+  },
+  {
+   "id": "t14-recovery-codes",
+   "split": "test",
+   "title": "Save your recovery codes",
+   "category": "account",
+   "private": true,
+   "seconds": 0.39117980003356934,
+   "ocr": "Save your recovery codes\n\nKeep these somewhere safe. If you lose your phone, each code can be\nused once to sign in to your Codehaven account.\n\na7f3c-91d2e 4be0d-c33a8\nf19a2-07b6c 8d5e1-a4f90\n2c7b9-e6d14 bO3f8-59c2a\n6e4a1-d8b37 93cOf-2a7e5\n\n| Download | Print | Copy |\n\n"
+  },
+  {
+   "id": "t15-id-card",
+   "split": "test",
+   "title": "STATE OF NORTH PLAINS",
+   "category": "document",
+   "private": true,
+   "seconds": 0.3497326374053955,
+   "ocr": "STATE OF NORTH PLAINS\nDRIVER LICENSE\n\nDL NP 40917725\nEXP 08/14/2031\n\nSAMPLE, ALEX J\n\n412 MESQUITE LN\n\nDOB 03/09/2001 - SEX M- HGT 5-10\nCLASS C\n\n"
+  },
+  {
+   "id": "t16-dashboard-users",
+   "split": "test",
+   "title": "Weekly active users New signups Retention (4 wk)",
+   "category": "chart",
+   "private": false,
+   "seconds": 0.42599916458129883,
+   "ocr": "Weekly active users New signups Retention (4 wk)\n\n1,284 212 41%\n\n+18% +9% -2 pts\n\nWeekly active users\n\nAug 3 Aug 17 Aug 31 Sep 14 Sep 28 Oct 12\n"
+  },
+  {
+   "id": "t17-budget-sheet",
+   "split": "test",
+   "title": "Hack Day budget",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.5008087158203125,
+   "ocr": "Hack Day budget\n\noN DO nO F WN\n\nA\nItem\nPizza (lunch)\nBreakfast tacos\nDrinks + snacks\nStickers\n\nPrizes\n\nQty\n16\n90\n\n200\n\nC\nUnit cost\n$14.00\n$2.25\n$140.00\n$0.35\n$50.00\nTotal\n\nFunding (SGA)\n\nTotal\n$224.00\n$202.50\n$140.00\n$70.00\n\n$150.00\n$786.50\n$800.00\n"
+  },
+  {
+   "id": "t18-linkedin-internship",
+   "split": "test",
+   "title": "CS @ UT San Antonio - 1d",
+   "category": "social",
+   "private": false,
+   "seconds": 0.49851059913635254,
+   "ocr": "Daniel Okafor\nCS @ UT San Antonio - 1d\n\nI'm happy to share that I'm starting a new position as a Software\nEngineering Intern at Kestrel Logistics! Thank you to everyone at the\ncareer fair who pointed me in the right direction.\n\nStarting a new position\nSoftware Engineering Intern at Kestrel Logistics\n\n&@ 148 - 37 comments\n"
+  },
+  {
+   "id": "t19-meme-my-machine",
+   "split": "test",
+   "title": "IT WORKS ON MY",
+   "category": "other",
+   "private": false,
+   "seconds": 0.3632042407989502,
+   "ocr": "IT WORKS ON MY\nMACHINE\n\nTHEN WE'LL SHIP\nYOUR MACHINE\n\n"
+  },
+  {
+   "id": "t20-wifi-settings",
+   "split": "test",
+   "title": "Ask to join networks: Notify",
+   "category": "account",
+   "private": false,
+   "seconds": 0.4232175350189209,
+   "ocr": "General\nAppearance\nBluetooth\nNetwork\n\nBattery\n\nWi-Fi\nWi-Fi\nConnected: utsa-secure v\n\nKnown networks\n\n@ Casa3B_5G\n& SWBC-Guest\n@ utsa-guest\n\n\u00ae HillCountryMarket_Free\n\nAsk to join networks: Notify\n"
+  },
+  {
+   "id": "t21-pull-request",
+   "split": "test",
+   "title": "@ \u00a9 @ _ codehaven.dev/anudeep-bonagiri/ratecon-radar/pull/7",
+   "category": "code",
+   "private": false,
+   "seconds": 0.7029843330383301,
+   "ocr": "@ \u00a9 @ _ codehaven.dev/anudeep-bonagiri/ratecon-radar/pull/7\n\nFix pre-filter: let four-word sentences through #7\nanudeep-bonagiri wants to merge 1 commit into main from fix-gate\n\nsrc/core.js\n- if (text.split(/\\s+/).length < 5) return false;\n\n+ if (text.split(/\\s+/).length < 4) return false;\n\nv All checks have passed - This branch has no conflicts with the base branch\n\nMerge pull request\n"
+  },
+  {
+   "id": "t22-card-details",
+   "split": "test",
+   "title": "Pinewood CU - Debit",
+   "category": "other",
+   "private": true,
+   "seconds": 0.4369394779205322,
+   "ocr": "4:05 iico\n\nCard details\n\nPinewood CU - Debit\n\n4417 1234 5678 9113\n\nANUDEEP BONAGIRI EXP 09/29 CVV 382\n\nLock card\n\nReport lost or stolen\n\nSet travel notice\n\nChange PIN\n"
+  },
+  {
+   "id": "h01-notes-wifi-password",
+   "split": "holdout",
+   "title": "October 18, 2026 at 8:13 PM",
+   "category": "account",
+   "private": false,
+   "seconds": 0.40543055534362793,
+   "ocr": "8:14 iii\n\n<\u00ab Notes\n\nMom's house\nOctober 18, 2026 at 8:13 PM\n\nWi-Fi: Bonagiri_Home\n\npw: mango-Lassi-2290\n\nGarage code is on the fridge.\nTrash goes out Thursday night.\n"
+  },
+  {
+   "id": "h02-github-token",
+   "split": "holdout",
+   "title": "@ \u00a9 @ _ codehaven.dev/settings/tokens",
+   "category": "account",
+   "private": true,
+   "seconds": 0.3932051658630371,
+   "ocr": "@ \u00a9 @ _ codehaven.dev/settings/tokens\n\nPersonal access tokens\n\nMake sure to copy your personal access token now. You won't be able to see it again!\n\nchp_4fQ9xT2LmA7rZOWK8sV3nB6yD1eHSuscPq\n\nratecon-radar deploy - Expires on Jan 19, 2027 - repo, workflow\n"
+  },
+  {
+   "id": "h03-terminal-aws-secret",
+   "split": "holdout",
+   "title": "anudeep@mbp ~ % cat ~/.aws/credentials",
+   "category": "document",
+   "private": true,
+   "seconds": 0.5532717704772949,
+   "ocr": "anudeep@mbp ~ % cat ~/.aws/credentials\n\n[default]\naws_ access key id = AKIA4QX7RZ2M9PLW3KEN\naws secret _access key = q8Vt+1mZcR4yO0Lw9EoX2bKf 7Hs5uNd3PjQ6aGiT1\n\n[cruze-dev]\naws_ access key id = AKIA7TB2KX9QW4MZ1RLP\naws_ secret_access key = Zp3Lm8Rq0Xw5Kt2Vy7Bn4Hc9J f 1Ds6Ga0Ue3Wi8\n\nanudeep@mbp ~ %\n"
+  },
+  {
+   "id": "h04-password-manager-entry",
+   "split": "holdout",
+   "title": "canvas.utsa.edu",
+   "category": "account",
+   "private": true,
+   "seconds": 0.31721019744873047,
+   "ocr": "canvas.utsa.edu\n\nPasswords\nUser name vjz000\nPassword Roadrunner!Fall26\n\nLast modified Aug 19, 2026\n"
+  },
+  {
+   "id": "h05-email-temp-password",
+   "split": "holdout",
+   "title": "Your new staff portal account",
+   "category": "account",
+   "private": true,
+   "seconds": 0.3705480098724365,
+   "ocr": "9:58 | |\n<\u00ab Inbox\n\nYour new staff portal account\nIT Help Desk - 9:51 AM\n\nHi Anudeep,\nYour account for the volunteer portal is ready.\n\nUsername: abonagiri\nTemporary password: Kq7#vR2p!Lm9\n\nYou will be asked to change it the first time you\nsign in.\n\nThanks,\nIT Help Desk\n"
+  },
+  {
+   "id": "h06-login-form-masked",
+   "split": "holdout",
+   "title": "Sign in to Codehaven",
+   "category": "account",
+   "private": true,
+   "seconds": 0.33536720275878906,
+   "ocr": "Sign in to Codehaven\n\nUsername or email address\n\nanudeep-bonagiri\n\nPassword\n\nForgot password?\n\n"
+  },
+  {
+   "id": "h07-2fa-settings",
+   "split": "holdout",
+   "title": "Password and authentication",
+   "category": "account",
+   "private": true,
+   "seconds": 0.5243532657623291,
+   "ocr": "Password and authentication\n\nTwo-factor authentication Enabled\n\nTwo-factor authentication adds an additional layer of security to your account by requiring more than\njust a password to sign in.\n\nAuthenticator app Configured\n\nRecovery codes Viewed Oct 19, 2026 - View\n"
+  },
+  {
+   "id": "h08-blog-api-key-placeholder",
+   "split": "holdout",
+   "title": "eee dev.to/someone/calling-an-open-model-api-in-5-lines",
+   "category": "code",
+   "private": true,
+   "seconds": 0.6789007186889648,
+   "ocr": "eee dev.to/someone/calling-an-open-model-api-in-5-lines\n\nCalling an open model API in 5 lines\n\nPosted on Oct 9 - 3 min read\n\nSet your key as an environment variable first, never paste it into code you commit.\n\nexport MODEL_API_KEY=\"YOUR_API_KEY_ HERE\"\n\ncurl https://api.example-models.dev/v1/chat \\\n-H \"Authorization: Bearer $MODEL_API KEY\" \\\n-d '{\"model\": \"gemma-4-e2b\", \"messages\": [...]}'\n\nIf you see a 401, the variable is not set in the shell you are using.\n"
+  },
+  {
+   "id": "h09-checkout-last-four",
+   "split": "holdout",
+   "title": "Review your order",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.33405113220214844,
+   "ocr": "Review your order\n\nSticker pack, 200 ct $70.00\n\nShipping $6.95\n\nOrder total $76.95\nPay with Debit \u00a2*** 9113 Change\n"
+  },
+  {
+   "id": "h10-lock-screen",
+   "split": "holdout",
+   "title": "Maya: are you bringing the extension cords?",
+   "category": "schedule",
+   "private": false,
+   "seconds": 0.3136286735534668,
+   "ocr": "iico\n\nSaturday, October 24\n\nT:42\n\nMessages now\nMaya: are you bringing the extension cords?\n\nCalendar 8:00 AM\nSWBC standup\n"
+  },
+  {
+   "id": "r01-sms-4-digit-code",
+   "split": "holdout2",
+   "title": "Text Message - Today 11:20 PM",
+   "category": "chat",
+   "private": false,
+   "seconds": 0.24234628677368164,
+   "ocr": "11:20\n35421\nText Message - Today 11:20 PM\n\nYour RideLoop code is 4821. Don't\nshare it with anyone.\n\niico\n"
+  },
+  {
+   "id": "r02-wallet-balance",
+   "split": "holdout2",
+   "title": "Transfer to bank Add money",
+   "category": "account",
+   "private": true,
+   "seconds": 0.32243895530700684,
+   "ocr": "1:02 iico\n\nPeerPay balance\n\n$184.20\nTransfer to bank Add money\n\nMaya Lopez +$32.00\nPizza for hack night\n\nChris Tran -$11.40\nUber split\nJordan K -$412.00\n\nOctober rent share\n"
+  },
+  {
+   "id": "r03-router-passphrase",
+   "split": "holdout2",
+   "title": "NetHaven AX3000 : Router admin",
+   "category": "account",
+   "private": true,
+   "seconds": 0.36589837074279785,
+   "ocr": "NetHaven AX3000 : Router admin\n\nWireless settings\n\nNetwork name (SSID) Bonagiri-AX\nSecurity WPA3-Personal\nPassword sunflower field after rain\nBand 2.4 GHz + 5 GHz\n"
+  },
+  {
+   "id": "r04-dm-staging-password",
+   "split": "holdout2",
+   "title": "# eng can you send me the staging",
+   "category": "other",
+   "private": false,
+   "seconds": 0.3964066505432129,
+   "ocr": "Cruze Shrithik\n\n# general\n\nShrithik 10:38 AM\n# eng can you send me the staging db login, i'm locked out\n\n@ Shrithik Anudeep 10:40 AM\nuser cruze_stage\n\nAnudeep 10:40 AM\npass Cz9!kP2w-tq\n\nShrithik 10:41 AM\nin. thanks\n\n"
+  },
+  {
+   "id": "r05-passport-page",
+   "split": "holdout2",
+   "title": "PASSPORT - REPUBLIC OF ARCADIA",
+   "category": "other",
+   "private": false,
+   "seconds": 0.35267043113708496,
+   "ocr": "PASSPORT - REPUBLIC OF ARCADIA\n\nPassport No. X12345678\nSurname: SAMPLE\nGiven names: JORDAN LEE\n\nDate of birth: 14 FEB 2000\nDate of expiry: 02 MAR 2034\n\nP<ARCSAMPLE<<JORDAN<LEE<<<<<<<<<<\nX123456780ARC0002146M3403022<<<<<<\n\n"
+  },
+  {
+   "id": "r06-ticket-rotate-keys",
+   "split": "holdout2",
+   "title": "Rotate the Mapbox and OpenRouter API keys",
+   "category": "travel",
+   "private": true,
+   "seconds": 0.46005773544311523,
+   "ocr": "CRUZE / ENG-4412\nRotate the Mapbox and OpenRouter API keys\n\nStatus: In progress Assignee: Anudeep B Due: Oct 28\n\nThe old keys were in a screenshot that went into a shared drive. Revoke both, issue new ones, update them\nin the deploy settings, and confirm the dev and staging builds still work. Do not paste the new keys in this\nticket.\n\nLinked: ENG-4398, ENG-4401\n"
+  },
+  {
+   "id": "r07-package-tracking",
+   "split": "holdout2",
+   "title": "Out for delivery",
+   "category": "other",
+   "private": false,
+   "seconds": 0.44390034675598145,
+   "ocr": "Tracking 1Z2999AA10123456784\n\nOut for delivery\n\nEstimated delivery: Today by 8:00 PM - Boerne, TX\nOct 21, 7:14 AM - Out for delivery - San Antonio, TX\nOct 20, 11:52 PM - Arrived at facility - San Antonio, TX\nOct 19, 4:03 PM - Departed facility - Dallas, TX\nOct 18, 2:40 PM - Label created\n"
+  },
+  {
+   "id": "r08-password-rules",
+   "split": "holdout2",
+   "title": "Create a new password",
+   "category": "account",
+   "private": true,
+   "seconds": 0.29917168617248535,
+   "ocr": "Create a new password\n\nWeak\n\ne vy Atleast 8 characters\ne\u00ab x One number\ne\u00ab x One symbol\n\ne vy Not one of your last 5 passwords\n"
+  },
+  {
+   "id": "r09-order-number-receipt",
+   "split": "holdout2",
+   "title": "Order placed, thanks!",
+   "category": "receipt",
+   "private": false,
+   "seconds": 0.36278486251831055,
+   "ocr": "Order placed, thanks!\n\nOrder #112-4839201-5567 - October 8, 2026\n\nUSB-C to HDMI cable, 6 ft x 2 - $23.98\n15-outlet power strip x 1- $34.99\n\nOrder total: $62.86\n\nArriving Saturday, Oct 10\n"
+  },
+  {
+   "id": "r10-token-generator-code",
+   "split": "holdout2",
+   "title": "auth/tokens.py",
+   "category": "code",
+   "private": true,
+   "seconds": 0.4529895782470703,
+   "ocr": "auth/tokens.py\nimport secrets\ndef new_api_token(prefix=\"cz_\", nbytes=24):\n\n# 24 random bytes, URL-safe, e.g. cz_<32 chars>\nreturn prefix + secrets.token_urlsafe(nbytes)\n\ndef is _valid(token):\nreturn token.startswith(\"cz_\") and len(token) == 35\n"
+  }
+ ]
+}

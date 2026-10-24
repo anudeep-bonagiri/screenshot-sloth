@@ -1,0 +1,120 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v1",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nPRIVATE: yes or no. Say yes only if the image itself shows a secret or an identity document: a password, a one-time or verification code, recovery codes, an API key or token, a full card number with expiry, an account balance, or a driver license or ID. A page that only talks about passwords, or a list of Wi-Fi network names, is no.",
+ "shots": [
+  {
+   "id": "h01-notes-wifi-password",
+   "split": "holdout",
+   "raw": "TITLE: Mom's house instructions and details\nTYPE: chat\nPRIVATE: no",
+   "title": "Mom's house instructions and details",
+   "category": "chat",
+   "private": false,
+   "seconds": 26.888,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "h02-github-token",
+   "split": "holdout",
+   "raw": "TITLE: Personal access tokens for codehaven\nTYPE: account\nPRIVATE: yes",
+   "title": "Personal access tokens for codehaven",
+   "category": "account",
+   "private": true,
+   "seconds": 26.926,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h03-terminal-aws-secret",
+   "split": "holdout",
+   "raw": "AWS credentials configuration for an application\ncode\nno",
+   "title": "AWS credentials configuration for an application",
+   "category": "other",
+   "private": false,
+   "seconds": 25.292,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h04-password-manager-entry",
+   "split": "holdout",
+   "raw": "TITLE: Canvas utsa.edu password details\nTYPE: account\nPRIVATE: no",
+   "title": "Canvas utsa.edu password details",
+   "category": "account",
+   "private": false,
+   "seconds": 25.756,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h05-email-temp-password",
+   "split": "holdout",
+   "raw": "TITLE: New staff portal account setup\nTYPE: account\nPRIVATE: yes",
+   "title": "New staff portal account setup",
+   "category": "account",
+   "private": true,
+   "seconds": 25.987,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "h06-login-form-masked",
+   "split": "holdout",
+   "raw": "TITLE: Sign in to Codehaven\nTYPE: account\nPRIVATE: no",
+   "title": "Sign in to Codehaven",
+   "category": "account",
+   "private": false,
+   "seconds": 25.737,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h07-2fa-settings",
+   "split": "holdout",
+   "raw": "TITLE: Two-factor authentication setup details\nTYPE: account\nPRIVATE: no",
+   "title": "Two-factor authentication setup details",
+   "category": "account",
+   "private": false,
+   "seconds": 25.768,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h08-blog-api-key-placeholder",
+   "split": "holdout",
+   "raw": "TITLE: Calling an open model API in 5 lines\nTYPE: article\nPRIVATE: no",
+   "title": "Calling an open model API in 5 lines",
+   "category": "article",
+   "private": false,
+   "seconds": 26.414,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h09-checkout-last-four",
+   "split": "holdout",
+   "raw": "TITLE: Review your order for sticker pack\nTYPE: receipt\nPRIVATE: no",
+   "title": "Review your order for sticker pack",
+   "category": "receipt",
+   "private": false,
+   "seconds": 24.921,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "h10-lock-screen",
+   "split": "holdout",
+   "raw": "TITLE: Maya extension cords and SWBC standup\nTYPE: chat\nPRIVATE: no",
+   "title": "Maya extension cords and SWBC standup",
+   "category": "chat",
+   "private": false,
+   "seconds": 25.943,
+   "inputTokens": 638,
+   "secret": ""
+  }
+ ]
+}

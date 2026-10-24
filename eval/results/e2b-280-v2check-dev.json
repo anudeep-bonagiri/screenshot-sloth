@@ -1,0 +1,121 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v2",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nSECRET: read every piece of text on screen. If any of it is an actual secret value, copy that value exactly. Secrets are: passwords (Wi-Fi passwords too), one-time or verification codes, recovery codes, API keys, tokens and other credentials (often long random strings, or the value after KEY=, TOKEN=, SECRET= or password:), full card numbers, account balances, and ID or license numbers. Dots, placeholders like YOUR_API_KEY, and the last four digits of a card are not secrets. If there is no secret, write: none",
+ "shots": [
+  {
+   "id": "d01-npm-build-error",
+   "split": "dev",
+   "raw": "TITLE: ratecon-radar build error\nTYPE: error\nSECRET: TypeError: Cannot read properties of undefined (reading'map')",
+   "title": "ratecon-radar build error",
+   "category": "error",
+   "private": false,
+   "seconds": 30.189,
+   "inputTokens": 686,
+   "secret": "TypeError: Cannot read properties of undefined (reading'map')"
+  },
+  {
+   "id": "d02-group-chat-pizza",
+   "split": "dev",
+   "raw": "TITLE: Rowdy Launch officers pizza order discussion\nTYPE: chat\nSECRET: none",
+   "title": "Rowdy Launch officers pizza order discussion",
+   "category": "chat",
+   "private": false,
+   "seconds": 27.904,
+   "inputTokens": 677,
+   "secret": ""
+  },
+  {
+   "id": "d03-order-headphones",
+   "split": "dev",
+   "raw": "TITLE: Order Confirmation for Fieldsparrow Arc wireless headphones\nTYPE: receipt\nSECRET: $79.99",
+   "title": "Order Confirmation for Fieldsparrow Arc wireless headphones",
+   "category": "receipt",
+   "private": false,
+   "seconds": 28.832,
+   "inputTokens": 686,
+   "secret": "$79.99"
+  },
+  {
+   "id": "d04-sms-verification-code",
+   "split": "dev",
+   "raw": "TITLE: Pinewood Credit Verification Code\nTYPE: chat\nSECRET: 482913",
+   "title": "Pinewood Credit Verification Code",
+   "category": "chat",
+   "private": true,
+   "seconds": 28.848,
+   "inputTokens": 677,
+   "secret": "482913"
+  },
+  {
+   "id": "d05-week-calendar",
+   "split": "dev",
+   "raw": "TITLE: October 2026 class schedule for Operating Systems and Computer Architecture\nTYPE: schedule\nSECRET: none",
+   "title": "October 2026 class schedule for Operating Systems and Computer Architecture",
+   "category": "schedule",
+   "private": false,
+   "seconds": 37.882,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "d06-article-sloth",
+   "split": "dev",
+   "raw": "TITLE: Three-toed sloth information\nTYPE: article\nSECRET: none",
+   "title": "Three-toed sloth information",
+   "category": "article",
+   "private": false,
+   "seconds": 30.235,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "d07-boarding-pass",
+   "split": "dev",
+   "raw": "TITLE: Meridian Air Boarding Pass for San Antonio to San Francisco\nTYPE: travel\nSECRET: none",
+   "title": "Meridian Air Boarding Pass for San Antonio to San Francisco",
+   "category": "travel",
+   "private": false,
+   "seconds": 30.596,
+   "inputTokens": 677,
+   "secret": ""
+  },
+  {
+   "id": "d08-editor-haversine",
+   "split": "dev",
+   "raw": "TITLE: Python function for great-circle distance\nTYPE: code\nSECRET: r = 3958.8",
+   "title": "Python function for great-circle distance",
+   "category": "code",
+   "private": false,
+   "seconds": 30.57,
+   "inputTokens": 686,
+   "secret": "r = 3958.8"
+  },
+  {
+   "id": "d09-bank-balance",
+   "split": "dev",
+   "raw": "TITLE: Pinewood Credit Union balance details\nTYPE: account\nSECRET: $2,341.18",
+   "title": "Pinewood Credit Union balance details",
+   "category": "account",
+   "private": true,
+   "seconds": 30.028,
+   "inputTokens": 677,
+   "secret": "$2,341.18"
+  },
+  {
+   "id": "d10-social-hacktoberfest",
+   "split": "dev",
+   "raw": "TITLE: Week 2 of Hacktoberfest with open-source AI\nTYPE: social\nSECRET: none",
+   "title": "Week 2 of Hacktoberfest with open-source AI",
+   "category": "social",
+   "private": false,
+   "seconds": 35.986,
+   "inputTokens": 686,
+   "secret": ""
+  }
+ ],
+ "parser": "v2 prompt + looksSecret() check"
+}

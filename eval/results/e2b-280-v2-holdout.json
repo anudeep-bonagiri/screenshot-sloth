@@ -1,0 +1,120 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "promptVersion": "v2",
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nSECRET: read every piece of text on screen. If any of it is an actual secret value, copy that value exactly. Secrets are: passwords (Wi-Fi passwords too), one-time or verification codes, recovery codes, API keys, tokens and other credentials (often long random strings, or the value after KEY=, TOKEN=, SECRET= or password:), full card numbers, account balances, and ID or license numbers. Dots, placeholders like YOUR_API_KEY, and the last four digits of a card are not secrets. If there is no secret, write: none",
+ "shots": [
+  {
+   "id": "h01-notes-wifi-password",
+   "split": "holdout",
+   "raw": "TITLE: Mom's house Wi-Fi and trash schedule\nTYPE: chat\nSECRET: pw: mango-Lassi-2290",
+   "title": "Mom's house Wi-Fi and trash schedule",
+   "category": "chat",
+   "private": true,
+   "seconds": 30.776,
+   "inputTokens": 677,
+   "secret": "pw: mango-Lassi-2290"
+  },
+  {
+   "id": "h02-github-token",
+   "split": "holdout",
+   "raw": "TITLE: Personal access tokens for codehaven\nTYPE: account\nSECRET: chp_4fQ9xT2LmA7rZoW8sV3nB6yD1eH5uJcP",
+   "title": "Personal access tokens for codehaven",
+   "category": "account",
+   "private": true,
+   "seconds": 35.727,
+   "inputTokens": 686,
+   "secret": "chp_4fQ9xT2LmA7rZoW8sV3nB6yD1eH5uJcP"
+  },
+  {
+   "id": "h03-terminal-aws-secret",
+   "split": "holdout",
+   "raw": "TITLE: AWS Access Key and Secret Credentials\nTYPE: code\nSECRET: aws_access_key = AKIA7B2KX9QW4MZIRLP\naws_secret_access_key = Zp3Lm8",
+   "title": "AWS Access Key and Secret Credentials",
+   "category": "code",
+   "private": true,
+   "seconds": 36.795,
+   "inputTokens": 686,
+   "secret": "aws_access_key = AKIA7B2KX9QW4MZIRLP"
+  },
+  {
+   "id": "h04-password-manager-entry",
+   "split": "holdout",
+   "raw": "TITLE: Canvas utsa.edu password details\nTYPE: account\nSECRET: username: vjz000, password: Roadrunner!Fall26",
+   "title": "Canvas utsa.edu password details",
+   "category": "account",
+   "private": true,
+   "seconds": 30.224,
+   "inputTokens": 686,
+   "secret": "username: vjz000, password: Roadrunner!Fall26"
+  },
+  {
+   "id": "h05-email-temp-password",
+   "split": "holdout",
+   "raw": "TITLE: New staff portal account setup\nTYPE: chat\nSECRET: Qq7#vR2p!Lm9",
+   "title": "New staff portal account setup",
+   "category": "chat",
+   "private": true,
+   "seconds": 29.043,
+   "inputTokens": 677,
+   "secret": "Qq7#vR2p!Lm9"
+  },
+  {
+   "id": "h06-login-form-masked",
+   "split": "holdout",
+   "raw": "TITLE: Sign in to Codehaven\nTYPE: account\nSECRET: none",
+   "title": "Sign in to Codehaven",
+   "category": "account",
+   "private": false,
+   "seconds": 26.346,
+   "inputTokens": 686,
+   "secret": ""
+  },
+  {
+   "id": "h07-2fa-settings",
+   "split": "holdout",
+   "raw": "TITLE: Two-factor authentication setup details\nTYPE: account\nSECRET: Enabled",
+   "title": "Two-factor authentication setup details",
+   "category": "account",
+   "private": true,
+   "seconds": 27.075,
+   "inputTokens": 686,
+   "secret": "Enabled"
+  },
+  {
+   "id": "h08-blog-api-key-placeholder",
+   "split": "holdout",
+   "raw": "TITLE: Calling an open model API in 5 lines\nTYPE: code\nSECRET: export MODEL_API_KEY=YOUR_API_KEY HERE",
+   "title": "Calling an open model API in 5 lines",
+   "category": "code",
+   "private": true,
+   "seconds": 31.218,
+   "inputTokens": 686,
+   "secret": "export MODEL_API_KEY=YOUR_API_KEY HERE"
+  },
+  {
+   "id": "h09-checkout-last-four",
+   "split": "holdout",
+   "raw": "TITLE: Review your order for sticker pack\nTYPE: receipt\nSECRET: Pay with Debit **** 9113",
+   "title": "Review your order for sticker pack",
+   "category": "receipt",
+   "private": true,
+   "seconds": 28.204,
+   "inputTokens": 686,
+   "secret": "Pay with Debit  9113"
+  },
+  {
+   "id": "h10-lock-screen",
+   "split": "holdout",
+   "raw": "TITLE: Maya extension cords and SWBC standup\nTYPE: chat\nSECRET: none",
+   "title": "Maya extension cords and SWBC standup",
+   "category": "chat",
+   "private": false,
+   "seconds": 27.161,
+   "inputTokens": 677,
+   "secret": ""
+  }
+ ]
+}

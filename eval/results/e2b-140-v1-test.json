@@ -1,0 +1,251 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 140,
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nPRIVATE: yes or no. Say yes only if the image itself shows a secret or an identity document: a password, a one-time or verification code, recovery codes, an API key or token, a full card number with expiry, an account balance, or a driver license or ID. A page that only talks about passwords, or a list of Wi-Fi network names, is no.",
+ "shots": [
+  {
+   "id": "t01-python-keyerror",
+   "split": "test",
+   "raw": "TITLE: Python traceback error message\nTYPE: error\nPRIVATE: no",
+   "title": "Python traceback error message",
+   "category": "error",
+   "private": false,
+   "seconds": 17.832,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t02-disk-not-ejected",
+   "split": "test",
+   "raw": "TITLE: Disk Not Ejected Properly Error Message\nTYPE: error\nPRIVATE: no",
+   "title": "Disk Not Ejected Properly Error Message",
+   "category": "error",
+   "private": false,
+   "seconds": 19.651,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t03-env-api-key",
+   "split": "test",
+   "raw": "TITLE: AWS-preflight error message\nTYPE: error\nPRIVATE: no",
+   "title": "AWS-preflight error message",
+   "category": "error",
+   "private": false,
+   "seconds": 18.099,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t04-sql-query",
+   "split": "test",
+   "raw": "TITLE: SQL query for student courses\nTYPE: code\nPRIVATE: no",
+   "title": "SQL query for student courses",
+   "category": "code",
+   "private": false,
+   "seconds": 17.926,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t05-chat-dinner-plans",
+   "split": "test",
+   "raw": "TITLE: Dinner tonight? Taco place by the brewery\nTYPE: chat\nPRIVATE: no",
+   "title": "Dinner tonight? Taco place by the brewery",
+   "category": "chat",
+   "private": false,
+   "seconds": 17.919,
+   "inputTokens": 510,
+   "secret": ""
+  },
+  {
+   "id": "t06-chat-wifi-password",
+   "split": "test",
+   "raw": "TITLE: Wi-Fi password for Apartment 3B\nTYPE: chat\nPRIVATE: no",
+   "title": "Wi-Fi password for Apartment 3B",
+   "category": "chat",
+   "private": false,
+   "seconds": 18.806,
+   "inputTokens": 510,
+   "secret": ""
+  },
+  {
+   "id": "t07-grocery-receipt",
+   "split": "test",
+   "raw": "TITLE: Hill Country Market Receipt\nTYPE: receipt\nPRIVATE: no",
+   "title": "Hill Country Market Receipt",
+   "category": "receipt",
+   "private": false,
+   "seconds": 16.99,
+   "inputTokens": 510,
+   "secret": ""
+  },
+  {
+   "id": "t08-invoice-website",
+   "split": "test",
+   "raw": "TITLE: Invoice for Website Redesign Services\nTYPE: receipt\nPRIVATE: no",
+   "title": "Invoice for Website Redesign Services",
+   "category": "receipt",
+   "private": false,
+   "seconds": 18.145,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t09-map-directions",
+   "split": "test",
+   "raw": "TITLE: Garner State Park directions to Boerne\nTYPE: travel\nPRIVATE: no",
+   "title": "Garner State Park directions to Boerne",
+   "category": "travel",
+   "private": false,
+   "seconds": 19.146,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t10-hotel-booking",
+   "split": "test",
+   "raw": "TITLE: Harbortlight Inn Mission District San Francisco booking\nTYPE: receipt\nPRIVATE: no",
+   "title": "Harbortlight Inn Mission District San Francisco booking",
+   "category": "receipt",
+   "private": false,
+   "seconds": 18.633,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t11-hack-day-event",
+   "split": "test",
+   "raw": "Hacktoberfest Hack Day event details\nschedule\nno",
+   "title": "Hacktoberfest Hack Day event details",
+   "category": "other",
+   "private": false,
+   "seconds": 17.429,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t12-syllabus-grading",
+   "split": "test",
+   "raw": "Activities and Grading Policy\ndocument\nno",
+   "title": "Activities and Grading Policy",
+   "category": "other",
+   "private": false,
+   "seconds": 16.73,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t13-docs-reset-password",
+   "split": "test",
+   "raw": "TITLE: Reset your password instructions\nTYPE: account\nPRIVATE: no",
+   "title": "Reset your password instructions",
+   "category": "account",
+   "private": false,
+   "seconds": 17.782,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t14-recovery-codes",
+   "split": "test",
+   "raw": "TITLE: Recovery codes for a user account\nTYPE: code\nPRIVATE: yes",
+   "title": "Recovery codes for a user account",
+   "category": "code",
+   "private": true,
+   "seconds": 17.766,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t15-id-card",
+   "split": "test",
+   "raw": "TITLE: Driver License Information\nTYPE: document\nPRIVATE: yes",
+   "title": "Driver License Information",
+   "category": "document",
+   "private": true,
+   "seconds": 17.638,
+   "inputTokens": 510,
+   "secret": ""
+  },
+  {
+   "id": "t16-dashboard-users",
+   "split": "test",
+   "raw": "TITLE: Weekly active users chart\nTYPE: chart\nPRIVATE: no",
+   "title": "Weekly active users chart",
+   "category": "chart",
+   "private": false,
+   "seconds": 17.899,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t17-budget-sheet",
+   "split": "test",
+   "raw": "TITLE: Budget calculation for items\nTYPE: receipt\nPRIVATE: no",
+   "title": "Budget calculation for items",
+   "category": "receipt",
+   "private": false,
+   "seconds": 17.099,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t18-linkedin-internship",
+   "split": "test",
+   "raw": "TITLE: Daniel Okator Software Engineering Intern at Kestrel Logistics\nTYPE: social\nPRIVATE: no",
+   "title": "Daniel Okator Software Engineering Intern at Kestrel Logistics",
+   "category": "social",
+   "private": false,
+   "seconds": 18.342,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t19-meme-my-machine",
+   "split": "test",
+   "raw": "TITLE: It Works on My Machine Shipping Machine\nTYPE: other\nPRIVATE: no",
+   "title": "It Works on My Machine Shipping Machine",
+   "category": "other",
+   "private": false,
+   "seconds": 17.313,
+   "inputTokens": 510,
+   "secret": ""
+  },
+  {
+   "id": "t20-wifi-settings",
+   "split": "test",
+   "raw": "TITLE: Wi-Fi Connection Details\nTYPE: error\nPRIVATE: no",
+   "title": "Wi-Fi Connection Details",
+   "category": "error",
+   "private": false,
+   "seconds": 17.301,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t21-pull-request",
+   "split": "test",
+   "raw": "code\nFix pre-filter sentences through #7",
+   "title": "code",
+   "category": "other",
+   "private": false,
+   "seconds": 17.209,
+   "inputTokens": 500,
+   "secret": ""
+  },
+  {
+   "id": "t22-card-details",
+   "split": "test",
+   "raw": "TITLE: Card details for Pinewood CU Debit\nTYPE: account\nPRIVATE: yes",
+   "title": "Card details for Pinewood CU Debit",
+   "category": "account",
+   "private": true,
+   "seconds": 18.214,
+   "inputTokens": 510,
+   "secret": ""
+  }
+ ]
+}

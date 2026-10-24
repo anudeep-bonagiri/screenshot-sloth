@@ -1,0 +1,119 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4",
+ "runtime": "node/onnxruntime CPU (2 cores)",
+ "softTokens": 280,
+ "prompt": "You are renaming a screenshot file so its owner can find it later by searching.\n\nLook at the screenshot and answer in exactly three lines, nothing else:\nTITLE: 3 to 8 words that say what this screenshot is about. Name the specific thing: the error, the item bought, the place, the people's plan, the topic, the app or project. Use words that appear on screen when they are the best name for it. No dates, no \"screenshot of\".\nTYPE: one word from this list:\n  code = source code, a code editor, a diff or pull request, a config file\n  error = an error message, stack trace, failed build or warning dialog\n  chat = a text, DM or group chat conversation\n  receipt = a receipt, order confirmation, invoice or bill\n  travel = a boarding pass, hotel or trip booking, map or directions\n  schedule = a calendar, timetable, event flyer or invitation\n  article = an article, documentation page, wiki or blog post\n  social = a social media post or profile\n  account = a bank or payment app, sign-in, security or settings screen\n  document = a form, ID, syllabus, spreadsheet, slide or PDF page\n  chart = a chart, graph or dashboard\n  other = anything else: a photo, meme or drawing\nPRIVATE: yes or no. Say yes only if the image itself shows a secret or an identity document: a password, a one-time or verification code, recovery codes, an API key or token, a full card number with expiry, an account balance, or a driver license or ID. A page that only talks about passwords, or a list of Wi-Fi network names, is no.",
+ "shots": [
+  {
+   "id": "d01-npm-build-error",
+   "split": "dev",
+   "raw": "TITLE: ratecon-radar build error message\nTYPE: error\nPRIVATE: no",
+   "title": "ratecon-radar build error message",
+   "category": "error",
+   "private": false,
+   "seconds": 27.801,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "d02-group-chat-pizza",
+   "split": "dev",
+   "raw": "TITLE: Rowdy Launch orders and pizza discussion\nTYPE: chat\nPRIVATE: no",
+   "title": "Rowdy Launch orders and pizza discussion",
+   "category": "chat",
+   "private": false,
+   "seconds": 27.574,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "d03-order-headphones",
+   "split": "dev",
+   "raw": "TITLE: Order Confirmation for Fieldsparrow Arc wireless headphones\nTYPE: receipt\nPRIVATE: no",
+   "title": "Order Confirmation for Fieldsparrow Arc wireless headphones",
+   "category": "receipt",
+   "private": false,
+   "seconds": 27.499,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "d04-sms-verification-code",
+   "split": "dev",
+   "raw": "TITLE: Pinewood Credit Union verification code\nTYPE: chat\nPRIVATE: yes",
+   "title": "Pinewood Credit Union verification code",
+   "category": "chat",
+   "private": true,
+   "seconds": 25.051,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "d05-week-calendar",
+   "split": "dev",
+   "raw": "TITLE: October 2026 class schedule for computer architecture\nTYPE: schedule\nPRIVATE: no",
+   "title": "October 2026 class schedule for computer architecture",
+   "category": "schedule",
+   "private": false,
+   "seconds": 26.472,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "d06-article-sloth",
+   "split": "dev",
+   "raw": "TITLE: Three-toed sloth information\nTYPE: article\nPRIVATE: no",
+   "title": "Three-toed sloth information",
+   "category": "article",
+   "private": false,
+   "seconds": 25.45,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "d07-boarding-pass",
+   "split": "dev",
+   "raw": "TITLE: Meridian Air Boarding Pass for San Antonio to San Francisco\nTYPE: travel\nPRIVATE: no",
+   "title": "Meridian Air Boarding Pass for San Antonio to San Francisco",
+   "category": "travel",
+   "private": false,
+   "seconds": 25.646,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "d08-editor-haversine",
+   "split": "dev",
+   "raw": "TITLE: Python function for great-circle distance\nTYPE: code\nPRIVATE: no",
+   "title": "Python function for great-circle distance",
+   "category": "code",
+   "private": false,
+   "seconds": 26.81,
+   "inputTokens": 647,
+   "secret": ""
+  },
+  {
+   "id": "d09-bank-balance",
+   "split": "dev",
+   "raw": "TITLE: Pinewood Credit Union balance and transactions\nTYPE: account\nPRIVATE: yes",
+   "title": "Pinewood Credit Union balance and transactions",
+   "category": "account",
+   "private": true,
+   "seconds": 25.218,
+   "inputTokens": 638,
+   "secret": ""
+  },
+  {
+   "id": "d10-social-hacktoberfest",
+   "split": "dev",
+   "raw": "TITLE: Week 2 of Hacktoberfest with open-source AI\nTYPE: social\nPRIVATE: no",
+   "title": "Week 2 of Hacktoberfest with open-source AI",
+   "category": "social",
+   "private": false,
+   "seconds": 27.796,
+   "inputTokens": 647,
+   "secret": ""
+  }
+ ]
+}
