@@ -1,0 +1,426 @@
+{
+ "model": "onnx-community/gemma-4-E2B-it-ONNX",
+ "dtype": "q4f16",
+ "runtime": "browser/webgpu, Chrome 155 on macOS (bench.html)",
+ "softTokens": 280,
+ "promptVersion": "v1",
+ "note": "Copied from bench.html output; second run on this machine, model loaded from browser cache.",
+ "shots": [
+  {
+   "id": "d01-npm-build-error",
+   "split": "dev",
+   "title": "ratecon-radar build error",
+   "category": "error",
+   "private": false,
+   "seconds": 1.44
+  },
+  {
+   "id": "d02-group-chat-pizza",
+   "split": "dev",
+   "title": "Rowdy Launch orders and pizza discussion",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.43
+  },
+  {
+   "id": "d03-order-headphones",
+   "split": "dev",
+   "title": "Order Confirmation for Fieldsparrow Arc wireless headphones",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.54
+  },
+  {
+   "id": "d04-sms-verification-code",
+   "split": "dev",
+   "title": "Pinewood Credit Union verification code",
+   "category": "chat",
+   "private": true,
+   "seconds": 1.4
+  },
+  {
+   "id": "d05-week-calendar",
+   "split": "dev",
+   "title": "October 2026 class schedule for computer architecture",
+   "category": "schedule",
+   "private": false,
+   "seconds": 1.54
+  },
+  {
+   "id": "d06-article-sloth",
+   "split": "dev",
+   "title": "Three-toed sloth information",
+   "category": "article",
+   "private": false,
+   "seconds": 1.44
+  },
+  {
+   "id": "d07-boarding-pass",
+   "split": "dev",
+   "title": "Meridian Air Boarding Pass for San Antonio to San Francisco",
+   "category": "travel",
+   "private": false,
+   "seconds": 1.5
+  },
+  {
+   "id": "d08-editor-haversine",
+   "split": "dev",
+   "title": "Python function for great-circle distance calculation",
+   "category": "code",
+   "private": false,
+   "seconds": 1.47
+  },
+  {
+   "id": "d09-bank-balance",
+   "split": "dev",
+   "title": "Pinewood Credit Union balance and transactions",
+   "category": "account",
+   "private": true,
+   "seconds": 1.42
+  },
+  {
+   "id": "d10-social-hacktoberfest",
+   "split": "dev",
+   "title": "Week 2 of Hacktoberfest AI project",
+   "category": "social",
+   "private": false,
+   "seconds": 1.58
+  },
+  {
+   "id": "t01-python-keyerror",
+   "split": "test",
+   "title": "KeyError traceback in Python execution",
+   "category": "error",
+   "private": false,
+   "seconds": 1.42
+  },
+  {
+   "id": "t02-disk-not-ejected",
+   "split": "test",
+   "title": "Disk Not Ejected Properly Error Message",
+   "category": "error",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t03-env-api-key",
+   "split": "test",
+   "title": ".env configuration file contents",
+   "category": "other",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t04-sql-query",
+   "split": "test",
+   "title": "SQL query for student course enrollment",
+   "category": "code",
+   "private": false,
+   "seconds": 1.41
+  },
+  {
+   "id": "t05-chat-dinner-plans",
+   "split": "test",
+   "title": "Shrithik's plans for dinner and parking",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.44
+  },
+  {
+   "id": "t06-chat-wifi-password",
+   "split": "test",
+   "title": "WiFi password for Casa3B_5G network",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t07-grocery-receipt",
+   "split": "test",
+   "title": "Hill Country Market Order Confirmation",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.37
+  },
+  {
+   "id": "t08-invoice-website",
+   "split": "test",
+   "title": "Invoice for Website Redesign and Chatbot Setup",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.47
+  },
+  {
+   "id": "t09-map-directions",
+   "split": "test",
+   "title": "Directions from Garner State Park to Boerne",
+   "category": "travel",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t10-hotel-booking",
+   "split": "test",
+   "title": "Harborlight Inn Mission District Booking Confirmation",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.47
+  },
+  {
+   "id": "t11-hack-day-event",
+   "split": "test",
+   "title": "Hacktoberfest Hack Day event details",
+   "category": "schedule",
+   "private": false,
+   "seconds": 1.42
+  },
+  {
+   "id": "t12-syllabus-grading",
+   "split": "test",
+   "title": "Activities and Grading breakdown",
+   "category": "other",
+   "private": false,
+   "seconds": 1.25
+  },
+  {
+   "id": "t13-docs-reset-password",
+   "split": "test",
+   "title": "Reset your password for Tallyboard",
+   "category": "article",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t14-recovery-codes",
+   "split": "test",
+   "title": "Save your recovery codes",
+   "category": "account",
+   "private": true,
+   "seconds": 1.37
+  },
+  {
+   "id": "t15-id-card",
+   "split": "test",
+   "title": "State of North Plains Driver License Information",
+   "category": "document",
+   "private": true,
+   "seconds": 1.4
+  },
+  {
+   "id": "t16-dashboard-users",
+   "split": "test",
+   "title": "Weekly active users and new signups chart",
+   "category": "chart",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "t17-budget-sheet",
+   "split": "test",
+   "title": "Hack Day budget for food and supplies",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.46
+  },
+  {
+   "id": "t18-linkedin-internship",
+   "split": "test",
+   "title": "Daniel Okafor Software Engineering Intern at Kestrel Logistics",
+   "category": "social",
+   "private": false,
+   "seconds": 1.53
+  },
+  {
+   "id": "t19-meme-my-machine",
+   "split": "test",
+   "title": "It Works On My Machine Shipping Your Machine",
+   "category": "other",
+   "private": false,
+   "seconds": 1.41
+  },
+  {
+   "id": "t20-wifi-settings",
+   "split": "test",
+   "title": "Wi-Fi Connected Networks List",
+   "category": "article",
+   "private": false,
+   "seconds": 1.4
+  },
+  {
+   "id": "t21-pull-request",
+   "split": "test",
+   "title": "Fix pre-filter: let four-word sentences through #7",
+   "category": "code",
+   "private": false,
+   "seconds": 1.55
+  },
+  {
+   "id": "t22-card-details",
+   "split": "test",
+   "title": "Card details for Pinewood CU Debit",
+   "category": "account",
+   "private": true,
+   "seconds": 1.41
+  },
+  {
+   "id": "h01-notes-wifi-password",
+   "split": "holdout",
+   "title": "Mom's house instructions and details",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.43
+  },
+  {
+   "id": "h02-github-token",
+   "split": "holdout",
+   "title": "Personal access tokens for codehaven",
+   "category": "account",
+   "private": true,
+   "seconds": 1.45
+  },
+  {
+   "id": "h03-terminal-aws-secret",
+   "split": "holdout",
+   "title": "AWS Access Key and Secret Credentials",
+   "category": "code",
+   "private": true,
+   "seconds": 1.45
+  },
+  {
+   "id": "h04-password-manager-entry",
+   "split": "holdout",
+   "title": "Canvas utsa.edu password details",
+   "category": "account",
+   "private": false,
+   "seconds": 1.46
+  },
+  {
+   "id": "h05-email-temp-password",
+   "split": "holdout",
+   "title": "New staff portal account setup",
+   "category": "account",
+   "private": true,
+   "seconds": 1.43
+  },
+  {
+   "id": "h06-login-form-masked",
+   "split": "holdout",
+   "title": "Sign in to Codehaven",
+   "category": "account",
+   "private": false,
+   "seconds": 1.42
+  },
+  {
+   "id": "h07-2fa-settings",
+   "split": "holdout",
+   "title": "Two-factor authentication setup details",
+   "category": "account",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "h08-blog-api-key-placeholder",
+   "split": "holdout",
+   "title": "Calling an open model API in 5 lines",
+   "category": "article",
+   "private": false,
+   "seconds": 1.51
+  },
+  {
+   "id": "h09-checkout-last-four",
+   "split": "holdout",
+   "title": "Review your order payment details",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.45
+  },
+  {
+   "id": "h10-lock-screen",
+   "split": "holdout",
+   "title": "Maya extension cords and SWBC standup",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.46
+  },
+  {
+   "id": "r01-sms-4-digit-code",
+   "split": "holdout2",
+   "title": "RideLoop code sharing warning",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.38
+  },
+  {
+   "id": "r02-wallet-balance",
+   "split": "holdout2",
+   "title": "PeerPay balance transactions",
+   "category": "receipt",
+   "private": true,
+   "seconds": 1.37
+  },
+  {
+   "id": "r03-router-passphrase",
+   "split": "holdout2",
+   "title": "NetHaven AX3000 Wireless settings configuration",
+   "category": "account",
+   "private": false,
+   "seconds": 1.53
+  },
+  {
+   "id": "r04-dm-staging-password",
+   "split": "holdout2",
+   "title": "Shrithik and Anudeep login issue",
+   "category": "chat",
+   "private": false,
+   "seconds": 1.5
+  },
+  {
+   "id": "r05-passport-page",
+   "split": "holdout2",
+   "title": "Passport Information Republic of Arcadia",
+   "category": "document",
+   "private": true,
+   "seconds": 1.43
+  },
+  {
+   "id": "r06-ticket-rotate-keys",
+   "split": "holdout2",
+   "title": "Rotate Mapbox and OpenRouter API keys",
+   "category": "article",
+   "private": false,
+   "seconds": 1.5
+  },
+  {
+   "id": "r07-package-tracking",
+   "split": "holdout2",
+   "title": "Tracking 1Z999AA10123456784 Out for delivery",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.79
+  },
+  {
+   "id": "r08-password-rules",
+   "split": "holdout2",
+   "title": "Create a new password",
+   "category": "account",
+   "private": false,
+   "seconds": 1.44
+  },
+  {
+   "id": "r09-order-number-receipt",
+   "split": "holdout2",
+   "title": "Order placed thanks USB HDMI cable",
+   "category": "receipt",
+   "private": false,
+   "seconds": 1.46
+  },
+  {
+   "id": "r10-token-generator-code",
+   "split": "holdout2",
+   "title": "Python function for generating tokens",
+   "category": "code",
+   "private": false,
+   "seconds": 1.46
+  }
+ ]
+}
