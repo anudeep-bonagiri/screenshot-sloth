@@ -11,7 +11,7 @@ Point it at the folder your screenshots land in. Google's open-weight Gemma 4 E2
 ## How it works
 
 1. Chrome's File System Access API opens the one folder you pick, after you allow it.
-2. Each image goes to a Web Worker running Gemma 4 E2B (4-bit, about 3.1 GB) through Transformers.js 4.3.1 on WebGPU. The model answers in three lines: a title, a type, and whether the image shows a secret.
+2. Each image goes to a Web Worker running Gemma 4 E2B (4-bit, about 3.4 GB to download) through Transformers.js 4.3.1 on WebGPU. The model answers in three lines: a title, a type, and whether the image shows a secret.
 3. Ordinary code does everything that touches a file. The date comes from the old name (or the file's modified time for `IMG_1234.PNG`), the title is cleaned for every file system, collisions get `(2)`, and the file is moved. Every move is written to `screenshot-sloth-log.csv` in the folder, and the page has an undo button for the last batch.
 
 The privacy claim is enforced by the browser. `index.html` sets a Content Security Policy that only allows connections to this site, the jsDelivr CDN (library code) and Hugging Face (model weights). The worker is started from a blob URL so it inherits the same policy. The "Run the privacy test" button tries to reach an outside server from the page and from the worker and passes only if the browser reports that it blocked both.
@@ -22,7 +22,7 @@ There is no build step and no backend. The 4-bit weights need an operator that t
 
 The screenshots are made up. `eval/fixtures.mjs` and `eval/fixtures-holdout.mjs` hold them as HTML, and `scripts/make-shots.mjs` renders them to PNG at Mac (2x) and iPhone (3x) density. Each one is labeled with its type, whether it shows a secret, and the words a useful name has to contain.
 
-The model numbers below come from `scripts/eval-run.mjs`, which runs the same prompt and parser as the app with onnxruntime on a 2-core cloud CPU. That is why the times are slow. `bench.html` runs the same screenshots through the app's own WebGPU worker.
+There are two sets of model numbers. The WebGPU rows come from `bench.html`, which runs the screenshots through the app's own worker in Chrome 155 on a Mac, with the q4f16 weights the app uses. The CPU rows come from `scripts/eval-run.mjs`, which runs the same prompt and parser with onnxruntime and q4 weights on a 2-core cloud CPU; the private-check experiments below were done there. The two weight formats give slightly different answers.
 
 ### Round one: naming and sorting (22 test screenshots)
 
@@ -30,6 +30,7 @@ The prompt was written against 10 dev screenshots, scored 10 of 10 there, and wa
 
 | System | Useful names | Right folder | Secrets caught | False alarms | Time each |
 |---|---|---|---|---|---|
+| Gemma 4 E2B q4f16 in Chrome (WebGPU), 280 image tokens | 20 of 22 | 16 of 22 | 3 of 5 | 0 | 1.4 s |
 | Gemma 4 E2B q4, 280 image tokens | 19 of 22 | 16 of 22 | 3 of 5 | 0 | 27.5 s (CPU) |
 | Gemma 4 E2B q4, 140 image tokens | 19 of 22 | 13 of 22 | 3 of 5 | 0 | 17.9 s (CPU) |
 | Tesseract OCR + keyword rules | 11 of 22 | 19 of 22 | 5 of 5 | 1 | 0.5 s |
@@ -50,6 +51,8 @@ Round one showed the model missing an API key in a `.env` file and a Wi-Fi passw
 | v2: copy the secret | 5 of 5, 6 false | 5 of 5, 3 false | 4 of 5, 2 false | 14 of 15 | 11 |
 | v2 + shape check | 5 of 5, 0 false | 5 of 5, 0 false | 2 of 5, 2 false | 12 of 15 | 2 |
 | Tesseract OCR + rules | 5 of 5, 1 false | 4 of 5, 3 false | 2 of 5, 3 false | 11 of 15 | 7 |
+
+Those rows are from the CPU runs. In Chrome on WebGPU, v1 caught 8 of 15 with no false alarms and v2 caught 15 of 15 with 11 false alarms (`eval/results/webgpu-280-*.json`); those are the numbers shown in the app.
 
 The shape check was perfect on the screenshots it was written against and worse than no check at all on new ones, so it is not in the app. The app offers v1 as "Careful" (the default) and v2 as "Catch more". Neither is a security tool. When v2 copies a secret, the worker drops the copied text immediately; it is never shown or stored.
 

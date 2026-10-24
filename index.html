@@ -33,7 +33,7 @@
     <h2>1. The model</h2>
     <div class="row wrap">
       <div class="grow">
-        <p>Gemma 4 E2B, Google's open-weight model, runs on your GPU in this tab and looks at each screenshot itself. It is a 3.1 GB download the first time, then it loads from this browser's storage.</p>
+        <p>Gemma 4 E2B, Google's open-weight model, runs on your GPU in this tab and looks at each screenshot itself. It is about a 3.4 GB download the first time, then it loads from this browser's storage.</p>
       </div>
       <div>
         <label for="detail">Image detail</label>
@@ -64,8 +64,8 @@
     <div class="row wrap" style="margin-top:12px">
       <div><label for="privacyMode">Private check</label>
       <select id="privacyMode">
-        <option value="v1" selected>Careful: caught 7 of 15 secrets in testing, flagged 0 of 27 ordinary shots</option>
-        <option value="v2">Catch more: caught 14 of 15, but also flagged 11 of 27 ordinary shots</option>
+        <option value="v1" selected>Careful: caught 8 of 15 secrets in testing, flagged 0 of 27 ordinary shots</option>
+        <option value="v2">Catch more: caught 15 of 15, but also flagged 11 of 27 ordinary shots</option>
       </select></div>
     </div>
     <div class="watch" id="watchRow" hidden style="margin-top:12px">
@@ -98,7 +98,7 @@
       <button id="leakBtn" class="ghost">Run the privacy test</button>
       <span id="leakOut" class="hint">Tries to send a request to an outside server from this page and from the model's worker. The browser should refuse both.</span>
     </div>
-    <p class="fine">The Private folder is a convenience, not a security tool. In testing on made-up screenshots, the careful setting caught 7 of 15 that showed a password, code, key, card or ID. The other setting caught 14 of 15 but also sent 11 of 27 ordinary screenshots to Private. Do not count on either to find your secrets. Source code and test results: <a href="https://github.com/anudeep-bonagiri/screenshot-sloth">github.com/anudeep-bonagiri/screenshot-sloth</a>.</p>
+    <p class="fine">The Private folder is a convenience, not a security tool. In testing on made-up screenshots, the careful setting caught 8 of 15 that showed a password, code, key, card or ID. The other setting caught 15 of 15 but also sent 11 of 27 ordinary screenshots to Private. Do not count on either to find your secrets. Source code and test results: <a href="https://github.com/anudeep-bonagiri/screenshot-sloth">github.com/anudeep-bonagiri/screenshot-sloth</a>.</p>
   </section>
 </main>
 
