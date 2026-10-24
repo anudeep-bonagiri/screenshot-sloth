@@ -24,21 +24,62 @@
 
 <section class="hero">
   <div class="glow" aria-hidden="true"></div>
-  <p class="eyebrow">Open-weight Gemma 4 · WebGPU · in this tab</p>
-  <h1>YOUR SCREENSHOTS, <b>NAMED</b><br>WHILE YOU DO <b>NOTHING.</b></h1>
-  <p class="lede">Point it at the folder your screenshots land in. Gemma looks at each image on your own GPU and turns <code>Screenshot 2026-10-09 at 10.12.33 PM.png</code> into <code>Errors/2026-10-09 KeyError in Python traceback.png</code>.</p>
-  <div class="row wrap hero-cta">
-    <a class="cta" href="#step-folder">Get started <span aria-hidden="true">↘</span></a>
-    <a class="cta ghost" href="https://github.com/anudeep-bonagiri/screenshot-sloth">Source and test results</a>
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">A free screenshot renamer that runs on your computer</p>
+      <h1>STOP SCROLLING<br>THROUGH <b>"SCREENSHOT AT 3.14 PM"</b></h1>
+      <p class="lede">Screenshot Sloth looks at every screenshot in a folder and renames it to what is actually in it, so you can find any of them later by searching. You pick the folder; it does the rest.</p>
+      <div class="row wrap hero-cta">
+        <a class="cta" href="#step-model">Rename my screenshots <span aria-hidden="true">↘</span></a>
+        <a class="cta ghost" href="#why">Why use it?</a>
+      </div>
+    </div>
+    <div class="ba" aria-label="Example: before and after">
+      <p class="ba-label">Before</p>
+      <ul class="ba-list old">
+        <li>Screenshot 2026-10-09 at 10.12.33 PM.png</li>
+        <li>Screenshot 2026-10-17 at 7.05.48 AM.png</li>
+        <li>IMG_4977.PNG</li>
+      </ul>
+      <p class="ba-arrow" aria-hidden="true">↓</p>
+      <p class="ba-label">After</p>
+      <ul class="ba-list new">
+        <li><span>Errors/</span>2026-10-09 KeyError in Python traceback.png</li>
+        <li><span>Travel/</span>2026-10-17 Directions from Boerne to Garner State Park.png</li>
+        <li><span class="lock">Private/</span>2026-10-24 Card details for Pinewood CU Debit.png</li>
+      </ul>
+    </div>
   </div>
 </section>
 
+<section class="why" id="why">
+  <h2 class="why-title">WHY <b>USE IT</b></h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <p class="why-num">01</p>
+      <h3>Find things by searching</h3>
+      <p>Screenshots are saved with only a date and time, so finding the one you need means opening them one by one. With real names, typing "receipt" or "error" in Finder or Spotlight brings it straight up.</p>
+    </div>
+    <div class="why-card">
+      <p class="why-num">02</p>
+      <h3>Your screenshots never leave your computer</h3>
+      <p>Screenshots hold passwords, bank screens and private chats. The AI (Google's open Gemma 4 model) runs inside this browser tab on your own computer. Nothing is uploaded, and there is a button below that proves it.</p>
+    </div>
+    <div class="why-card">
+      <p class="why-num">03</p>
+      <h3>Set it up once, then forget it</h3>
+      <p>It sorts files into folders like Errors, Receipts and Travel, can move ones that look private into their own folder, and can keep watching so new screenshots get named as you take them. It is free and needs no account.</p>
+    </div>
+  </div>
+  <p class="why-how"><b>How it works in three steps:</b> load the AI once (a one-time download), choose your screenshots folder, then check the suggested names and press Rename. Everything can be undone.</p>
+</section>
+
 <main>
-  <section class="panel">
-    <h2><span class="num">01</span>THE <b>MODEL</b></h2>
+  <section class="panel" id="step-model">
+    <h2><span class="num">01</span>LOAD THE <b>AI</b></h2>
     <div class="row wrap">
       <div class="grow">
-        <p>Gemma 4 E2B, Google's open-weight model, runs on your GPU in this tab and looks at each screenshot itself. It is about a 3.4 GB download the first time, then it loads from this browser's storage.</p>
+        <p>This puts the AI in your browser: Google's open Gemma 4 model, running on your computer's graphics chip. The first time it downloads about 3.4 GB, so use Wi-Fi. After that it opens in a few seconds, even offline.</p>
       </div>
       <div>
         <label for="detail">Image detail</label>
@@ -54,7 +95,7 @@
   </section>
 
   <section class="panel" id="step-folder">
-    <h2><span class="num">02</span>THE <b>FOLDER</b> <span class="hint" id="folderName"></span></h2>
+    <h2><span class="num">02</span>CHOOSE YOUR <b>FOLDER</b> <span class="hint" id="folderName"></span></h2>
     <div class="row wrap">
       <button id="pickBtn" class="primary">Choose your screenshots folder</button>
       <button id="sampleBtn" class="chip">Or try six made-up screenshots</button>
@@ -81,7 +122,7 @@
 
   <section class="panel" id="results" hidden>
     <div class="row wrap" style="justify-content:space-between">
-      <h2 style="margin:0"><span class="num">03</span>THE <b>NAMES</b> <span class="count" id="shotCount"></span></h2>
+      <h2 style="margin:0"><span class="num">03</span>CHECK THE <b>NAMES</b> <span class="count" id="shotCount"></span></h2>
       <div class="row wrap">
         <button id="undoBtn" class="ghost" hidden>Undo last rename</button>
         <button id="applyBtn" class="primary" hidden disabled>Rename</button>
@@ -93,7 +134,7 @@
   </section>
 
   <section class="panel how">
-    <h2><span class="num">04</span>HOW IT <b>WORKS</b></h2>
+    <h2><span class="num">04</span>UNDER THE <b>HOOD</b></h2>
     <ol>
       <li><strong>The browser opens your folder.</strong> Chrome's File System Access API lets this page read and rename files in the one folder you pick, after you allow it. Nothing is copied anywhere.</li>
       <li><strong>Gemma looks at each screenshot.</strong> Gemma 4 E2B runs on your GPU through WebGPU and Transformers.js. It answers with a short title, a type and whether the image shows a secret.</li>
