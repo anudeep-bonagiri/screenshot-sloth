@@ -12,25 +12,30 @@
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#15140f">
+<meta name="theme-color" content="#0b0714">
 </head>
 <body>
-<header class="top">
-  <div class="brand">
-    <img class="mark" src="assets/icon.svg" alt="">
-    <div>
-      <h1>Screenshot Sloth</h1>
-      <p class="tag">Your screenshots get real names while you do nothing.</p>
-    </div>
-  </div>
+<header class="nav">
+  <a class="word" href="./"><img class="mark" src="assets/icon.svg" alt=""><span>SCREENSHOT <b>SLOTH</b></span></a>
   <div class="privacy" title="Enforced by this page's Content Security Policy">
     <span class="dot"></span> Runs on this device. Nothing is uploaded.
   </div>
 </header>
 
+<section class="hero">
+  <div class="glow" aria-hidden="true"></div>
+  <p class="eyebrow">Open-weight Gemma 4 · WebGPU · in this tab</p>
+  <h1>YOUR SCREENSHOTS, <b>NAMED</b><br>WHILE YOU DO <b>NOTHING.</b></h1>
+  <p class="lede">Point it at the folder your screenshots land in. Gemma looks at each image on your own GPU and turns <code>Screenshot 2026-10-09 at 10.12.33 PM.png</code> into <code>Errors/2026-10-09 KeyError in Python traceback.png</code>.</p>
+  <div class="row wrap hero-cta">
+    <a class="cta" href="#step-folder">Get started <span aria-hidden="true">↘</span></a>
+    <a class="cta ghost" href="https://github.com/anudeep-bonagiri/screenshot-sloth">Source and test results</a>
+  </div>
+</section>
+
 <main>
   <section class="panel">
-    <h2>1. The model</h2>
+    <h2><span class="num">01</span>THE <b>MODEL</b></h2>
     <div class="row wrap">
       <div class="grow">
         <p>Gemma 4 E2B, Google's open-weight model, runs on your GPU in this tab and looks at each screenshot itself. It is about a 3.4 GB download the first time, then it loads from this browser's storage.</p>
@@ -48,8 +53,8 @@
     <p class="status" id="modelStatus">Needs Chrome or Edge on a laptop or desktop (WebGPU).</p>
   </section>
 
-  <section class="panel">
-    <h2>2. The folder <span class="hint" id="folderName" style="text-transform:none;letter-spacing:0"></span></h2>
+  <section class="panel" id="step-folder">
+    <h2><span class="num">02</span>THE <b>FOLDER</b> <span class="hint" id="folderName"></span></h2>
     <div class="row wrap">
       <button id="pickBtn" class="primary">Choose your screenshots folder</button>
       <button id="sampleBtn" class="chip">Or try six made-up screenshots</button>
@@ -76,7 +81,7 @@
 
   <section class="panel" id="results" hidden>
     <div class="row wrap" style="justify-content:space-between">
-      <h2 style="margin:0">Screenshots <span class="count" id="shotCount"></span></h2>
+      <h2 style="margin:0"><span class="num">03</span>THE <b>NAMES</b> <span class="count" id="shotCount"></span></h2>
       <div class="row wrap">
         <button id="undoBtn" class="ghost" hidden>Undo last rename</button>
         <button id="applyBtn" class="primary" hidden disabled>Rename</button>
@@ -88,7 +93,7 @@
   </section>
 
   <section class="panel how">
-    <h2>How this works</h2>
+    <h2><span class="num">04</span>HOW IT <b>WORKS</b></h2>
     <ol>
       <li><strong>The browser opens your folder.</strong> Chrome's File System Access API lets this page read and rename files in the one folder you pick, after you allow it. Nothing is copied anywhere.</li>
       <li><strong>Gemma looks at each screenshot.</strong> Gemma 4 E2B runs on your GPU through WebGPU and Transformers.js. It answers with a short title, a type and whether the image shows a secret.</li>

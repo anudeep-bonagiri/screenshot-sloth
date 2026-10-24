@@ -1,7 +1,7 @@
 // Service worker: keeps the app shell and the library files so Screenshot Sloth
 // opens with no connection. Model weights are cached separately by Transformers.js.
-const VERSION = "ss-v1";
-const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/styles.css", "assets/icon.svg",
+const VERSION = "ss-v2";
+const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/styles.css", "assets/icon.svg", "assets/archivo.woff2",
   "src/app.js", "src/core.js", "src/worker.js",
   "samples/t01-python-keyerror.png", "samples/t06-chat-wifi-password.png", "samples/t09-map-directions.png", "samples/t17-budget-sheet.png", "samples/t21-pull-request.png", "samples/t22-card-details.png"];
 
