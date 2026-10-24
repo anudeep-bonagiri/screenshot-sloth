@@ -1,0 +1,18 @@
+{
+  "name": "screenshot-sloth",
+  "version": "1.0.0",
+  "description": "Rename and sort your screenshots with open-weight Gemma 4 running in the browser. Nothing is uploaded.",
+  "scripts": {
+    "shots": "node scripts/make-shots.mjs",
+    "eval": "node scripts/eval-run.mjs test",
+    "score": "node scripts/score.mjs eval/results/e2b-280-test.json test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1"
+  },
+  "type": "module",
+  "private": true
+}

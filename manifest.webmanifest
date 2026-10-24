@@ -1,0 +1,10 @@
+{
+  "name": "Screenshot Sloth",
+  "short_name": "Screenshot Sloth",
+  "description": "Rename and sort your screenshots with open-weight Gemma 4 running on your device.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#15140f",
+  "theme_color": "#15140f",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

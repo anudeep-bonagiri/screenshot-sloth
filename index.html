@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screenshot Sloth: rename your screenshots without lifting a finger</title>
+<meta name="description" content="Point it at your screenshots folder. Open-weight Gemma 4 looks at each one in your browser, gives it a name you can search for, and sorts it. Nothing is uploaded.">
+<!-- The browser enforces this. The page and its worker can only talk to this site,
+     the jsDelivr CDN (library code) and Hugging Face (model weights). There is no
+     other place a screenshot could be sent. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'wasm-unsafe-eval' blob:; worker-src 'self' blob: https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net https://huggingface.co https://*.huggingface.co https://*.hf.co; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#15140f">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img class="mark" src="assets/icon.svg" alt="">
+    <div>
+      <h1>Screenshot Sloth</h1>
+      <p class="tag">Your screenshots get real names while you do nothing.</p>
+    </div>
+  </div>
+  <div class="privacy" title="Enforced by this page's Content Security Policy">
+    <span class="dot"></span> Runs on this device. Nothing is uploaded.
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>1. The model</h2>
+    <div class="row wrap">
+      <div class="grow">
+        <p>Gemma 4 E2B, Google's open-weight model, runs on your GPU in this tab and looks at each screenshot itself. It is a 3.1 GB download the first time, then it loads from this browser's storage.</p>
+      </div>
+      <div>
+        <label for="detail">Image detail</label>
+        <select id="detail">
+          <option value="140">Fast (140 image tokens)</option>
+          <option value="280" selected>Normal (280, the model's default)</option>
+        </select>
+      </div>
+      <button id="loadBtn" class="primary">Load model</button>
+    </div>
+    <div class="progress" id="loadProgress" hidden><div class="bar" id="loadBar"></div></div>
+    <p class="status" id="modelStatus">Needs Chrome or Edge on a laptop or desktop (WebGPU).</p>
+  </section>
+
+  <section class="panel">
+    <h2>2. The folder <span class="hint" id="folderName" style="text-transform:none;letter-spacing:0"></span></h2>
+    <div class="row wrap">
+      <button id="pickBtn" class="primary">Choose your screenshots folder</button>
+      <button id="sampleBtn" class="chip">Or try six made-up screenshots</button>
+    </div>
+    <p class="hint" id="pickNote" style="margin-top:10px">On a Mac screenshots land on the Desktop unless you changed it. On Windows they are in Pictures/Screenshots. The browser will ask once for permission to edit that folder.</p>
+    <div class="opts">
+      <label><input type="checkbox" id="optShots" checked> Only files named like screenshots</label>
+      <label><input type="checkbox" id="optFolders" checked> Sort into folders by type</label>
+      <label><input type="checkbox" id="optPrivate" checked> Put private ones in a "Private" folder</label>
+      <label><input type="checkbox" id="optAuto"> Rename without asking me</label>
+    </div>
+    <div class="row wrap" style="margin-top:12px">
+      <div><label for="privacyMode">Private check</label>
+      <select id="privacyMode">
+        <option value="v1" selected>Careful: caught 7 of 15 secrets in testing, flagged 0 of 27 ordinary shots</option>
+        <option value="v2">Catch more: caught 14 of 15, but also flagged 11 of 27 ordinary shots</option>
+      </select></div>
+    </div>
+    <div class="watch" id="watchRow" hidden style="margin-top:12px">
+      <label style="display:flex;gap:8px;align-items:center;margin:0;color:var(--text);font-size:14px"><input type="checkbox" id="optWatch" style="accent-color:var(--hi)"> Keep watching this folder while the tab is open</label>
+      <span class="sloth" id="watchNote"></span>
+    </div>
+  </section>
+
+  <section class="panel" id="results" hidden>
+    <div class="row wrap" style="justify-content:space-between">
+      <h2 style="margin:0">Screenshots <span class="count" id="shotCount"></span></h2>
+      <div class="row wrap">
+        <button id="undoBtn" class="ghost" hidden>Undo last rename</button>
+        <button id="applyBtn" class="primary" hidden disabled>Rename</button>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:6px">Names are suggestions until you press Rename. Click a name to edit it. Every rename is written to screenshot-sloth-log.csv in the folder.</p>
+    <div class="shots" id="shots"></div>
+    <p class="stats" id="stats"></p>
+  </section>
+
+  <section class="panel how">
+    <h2>How this works</h2>
+    <ol>
+      <li><strong>The browser opens your folder.</strong> Chrome's File System Access API lets this page read and rename files in the one folder you pick, after you allow it. Nothing is copied anywhere.</li>
+      <li><strong>Gemma looks at each screenshot.</strong> Gemma 4 E2B runs on your GPU through WebGPU and Transformers.js. It answers with a short title, a type and whether the image shows a secret.</li>
+      <li><strong>Code does the rest.</strong> The date comes from the old file name. The name is cleaned for every file system, collisions get a number, and the file moves into its folder. The model never touches a file.</li>
+    </ol>
+    <div class="row wrap">
+      <button id="leakBtn" class="ghost">Run the privacy test</button>
+      <span id="leakOut" class="hint">Tries to send a request to an outside server from this page and from the model's worker. The browser should refuse both.</span>
+    </div>
+    <p class="fine">The Private folder is a convenience, not a security tool. In testing on made-up screenshots, the careful setting caught 7 of 15 that showed a password, code, key, card or ID. The other setting caught 14 of 15 but also sent 11 of 27 ordinary screenshots to Private. Do not count on either to find your secrets. Source code and test results: <a href="https://github.com/anudeep-bonagiri/screenshot-sloth">github.com/anudeep-bonagiri/screenshot-sloth</a>.</p>
+  </section>
+</main>
+
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
