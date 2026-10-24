@@ -126,3 +126,29 @@ table.bench { border-collapse: collapse; width: 100%; font-size: 14px; }
 table.bench th, table.bench td { border-bottom: 1px solid var(--line); padding: 8px; text-align: right; }
 table.bench th:first-child, table.bench td:first-child { text-align: left; }
 pre.log { background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 14px; font: 12px/1.5 var(--mono); max-height: 340px; overflow: auto; white-space: pre-wrap; }
+
+/* ------------------------------------------------------------ hero example + why */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+.ba { background: rgba(11, 7, 20, .55); border: 1px solid var(--line); border-radius: 22px; padding: 20px; backdrop-filter: blur(8px); }
+.ba-label { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.ba-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ba-list li { font: 12.5px/1.45 var(--mono); padding: 8px 10px; border-radius: 10px; background: rgba(255, 255, 255, .05); overflow-wrap: anywhere; }
+.ba-list.old li { color: var(--muted); }
+.ba-list.new li { color: var(--text); }
+.ba-list.new span { color: var(--hi); }
+.ba-list.new span.lock { color: var(--warn); }
+.ba-arrow { text-align: center; font-size: 22px; color: var(--hi); margin: 10px 0; }
+
+.why { max-width: 1180px; width: calc(100% - 2 * clamp(12px, 3vw, 24px)); margin: 18px auto 0; }
+.why-title { font-stretch: 125%; font-weight: 300; font-size: clamp(24px, 3.4vw, 40px); margin: 18px 4px 16px; }
+.why-title b { font-weight: 800; }
+.why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } }
+.why-card { background: linear-gradient(160deg, rgba(124, 77, 255, .16), rgba(255, 255, 255, .03) 60%); border: 1px solid var(--line); border-radius: var(--r); padding: 26px; }
+.why-card h3 { margin: 6px 0 10px; font-size: 20px; line-height: 1.25; font-weight: 700; }
+.why-card p { margin: 0; color: #d6cfe6; }
+.why-num { font: 500 13px var(--mono); color: var(--hi) !important; }
+.why-how { margin: 16px 4px 0; color: #d6cfe6; font-size: 15px; }
+.why-how b { color: var(--text); }
+.hero-grid h1 { font-size: clamp(28px, 3.8vw, 54px); }
